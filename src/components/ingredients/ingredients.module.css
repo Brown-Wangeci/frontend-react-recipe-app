@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
+.card{
+    min-width: 330px;
+    font-family: "Caveat", cursive;
+    padding: 20px;
+}
+.h1{
+    margin: 0 0 20px 0;
+    font-size: 2.7em;
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    text-decoration-style: wavy;
+    text-underline-offset: 10px;
+}
+.ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+.li{
+    font-size: 1.5em;
+    text-wrap: nowrap;
+    width: 100%;
+    margin: 10px auto;
+    padding-bottom: 5px;
+    border-bottom: dotted;
+    text-align: start;
+}
