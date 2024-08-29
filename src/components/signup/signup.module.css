@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
+
+.form{
+    font-family: "Gochi Hand", cursive;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    margin: auto;
+    
+}
+.fieldSet{
+    border: 5px dotted rgba(0, 0, 0, 0.5);
+    min-width: 300px;
+    min-height: 400px;
+}
+.legend{
+    font-size: 2.5em;
+}
+.label ,.input{
+    display: block;
+    margin: 10px;
+} 
+.label{
+    font-size: 1.5em;
+}
+.input{
+    outline: none;
+    border: none;
+    font-size: 1.5em;
+    width: 90%;
+    padding: 5px;
+    background-color: white;
+}
+.input:focus{
+    border-bottom:3px solid rgba(0, 0, 0, 0.6);
+}
+.input:user-valid{
+    border-bottom:3px solid rgb(37, 117, 37);
+}
+.input:user-invalid{
+    border-bottom:3px solid rgb(181, 17, 17);
+}
+.button{
+    font-family: "Gochi Hand", cursive;
+    font-weight: 600;
+    width: 90%;
+    font-size: 1.5em;
+    padding: 5px 10px;
+    border: 2px solid rgba(0, 0, 0, 0.6);
+    background-color: transparent;
+    cursor: pointer;
+    margin: 10px;
+}
+.button:active{
+    box-shadow: inset 4px 4px 6px -1px rgba(0,0,0,0.2),
+	            inset -4px -4px 6px -1px rgba(255,255,255,0.7),
+	            -0.5px -0.5px 0px rgba(255,255,255,1),
+                0.5px 0.5px 0px rgba(0,0,0,0.15),
+	            0px 12px 10px -10px rgba(0,0,0,0.05);
+    transform: scale(0.99);
+}
+.logIn{
+    font-size: 1.1em;
+    text-align: center;
+    margin: 10px;
+}
+.logIn > a{
+    font-size: 1.15em;
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.6);
+}
+.logIn > a:hover{
+    color: rgb(37, 117, 37);
+    text-decoration: underline;
+    cursor: pointer;
+}
+.main{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}

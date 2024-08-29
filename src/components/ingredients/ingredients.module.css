@@ -1,12 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
 .card{
-    min-width: 330px;
+    min-width: 350px;
     font-family: "Caveat", cursive;
-    padding: 20px;
+    padding: 0 20px;
 }
 .h1{
+    font-family: "Gochi Hand", cursive;
     margin: 0 0 20px 0;
-    font-size: 2.7em;
+    font-size: 2em;
     text-align: center;
     text-decoration: underline;
     text-decoration-skip-ink: none;

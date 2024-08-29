@@ -1,15 +1,21 @@
 .card{
-    width: 330px;
-    height: 520px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: fit-content;
     margin: 10px;
     border-radius: 11px;
+}
+.bla{
+    margin: 0;
+    width: 330px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    position: relative;
+    border: 3px dashed gray;
+    overflow: hidden;
 }
 .image{
-    border-top-right-radius: 11px;
-    border-top-left-radius: 11px;
-    width: 100%;
+    border-radius: 11px;
+    width: 330px;
     height: 247.50px;
 }
 .tags{
@@ -79,6 +85,7 @@
     animation: heartAnimation 1.5s;
 }
 .button{
+    margin: 10px auto 25px auto;
     text-align: center;
 }
 

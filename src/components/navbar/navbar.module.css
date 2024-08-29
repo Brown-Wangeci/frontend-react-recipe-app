@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 20px;
+    width: 80%;
+    height: 100px;
+    margin: 20px auto;
+    padding: 10px 20px;
+    border: 1px solid #333;
+    color: #333;
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(8px);
+    z-index: 50;
+}
+.logoSection{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.logoSection > .h1, .h1 > span{
+    transition: all 0.6s;
+}
+.logoSection:hover{
+    cursor: pointer;
+}
+.logoSection:hover .h1{
+    color: #e7bc23;
+}
+.logoSection:hover .h1 > span{
+    color: #7cb427;
+}
+
+.logo{
+    width: 100px;
+    height: 100px;
+}
+.h1{
+    font-family: "Gochi Hand", cursive;
+    font-size: 2em;
+}
+.ulLinks{
+    font-family: "Gochi Hand", cursive;
+    display: flex;
+    gap: 20px;
+    list-style-type:none;
+}
+.liLinks > a{
+    padding: 5px 10px;
+    text-decoration: none;
+    color: #333;
+}
+.liLinks:hover a{
+    text-decoration: underline;
+    text-decoration-color: #7cb427;
+    text-decoration-skip-ink: none;
+    text-decoration-style: wavy;
+    text-underline-offset: 10px;
+}
+@media screen and (max-width: 800px){
+    .navbar{
+        width: 95%;
+    }
+    .logoSection{
+        gap: 5px;
+    }
+    .logo{
+        width: 50px;
+        height: 50px;
+    }
+    .h1{
+        font-size: 1.5em;
+    }
+    .ulLinks{
+        gap: 10px;
+    }
+    .liLinks > a{
+        padding: 5px 5px;
+    }
+}
