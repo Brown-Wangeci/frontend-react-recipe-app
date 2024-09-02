@@ -6,6 +6,7 @@ import SignUpPage from './pages/signUpPage/SignUpPage.js';
 import RecipesPage from './pages/recipesPage/RecipesPage.js';
 import Footer from './components/footer/Footer.js';
 import ResetPasswordPage from './pages/resetPasswordPage/ResetPasswordPage.js';
+import LandingPage from './pages/landingPage/LandingPage.js';
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
         <div className="pages">
           <Routes>
             <Route path='/'>
+              <Route index element={<LandingPage/>}/>
               <Route path='login' element={<LogInPage/>}/>
               <Route path='signup' element={<SignUpPage/>}/>
               <Route path='recipes' element={<RecipesPage/>}/>
