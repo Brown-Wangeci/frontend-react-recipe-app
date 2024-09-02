@@ -1,8 +1,8 @@
 import {useState, useEffect} from 'react';
 import Axios from 'axios';
-import FavouriteButton from '../button/Button';
+import Button from '../button/Button';
 import styles from './generatedCard.module.css';
-import Image from './favorite (1).png';
+import heartIcon from './favorite (1).png';
 
 const GeneratedCard = () => {
     const [meal, setMeal] = useState(null);
@@ -19,24 +19,24 @@ const GeneratedCard = () => {
         fetchMealData();
     },[])
 
-    return ( 
+    return (
         <div className={styles.card}>
             <img src={meal && meal.strMealThumb} alt="profile" className={styles.image}/>
-            <div className={styles.bla}>
-                <div className={styles.tags}>
+            <div className={styles.innerCard}>
+                <div className={styles.tagsContainer}>
                     <div className={`${styles.tag} ${styles.category}`}>{meal && meal.strCategory}</div>
-                    <div className={`${styles.tag} ${styles.area}`}>{meal && meal.strArea}</div>
+                    <div className={`${styles.tag} ${styles.cuisine}`}>{meal && meal.strArea}</div>
                 </div>
-                <div className={styles.name}><strong>{meal && meal.strMeal}</strong></div>
-                <input className={styles.input} type="checkbox" name="favorite" id="favorite" />
-                <label htmlFor="favorite" className={styles.favorite}>
-                    <img className={styles.icon} src={Image} height="30px" alt="favorite" />
+                <div className={styles.mealName}><strong>{meal && meal.strMeal}</strong></div>
+                <input className={styles.checkBox} type="checkbox" name="favorite" id="favorite" />
+                <label htmlFor="favorite" className={styles.favoriteLabel}>
+                    <img className={styles.icon} src={heartIcon} height="30px" alt="favorite-icon" />
                     <div className={styles.favoriteText}>
                         <span className={`${styles.add} ${styles.options}`}>Add to Favorites</span>
                         <span className={`${styles.added} ${styles.options}`}>Added to Favorites</span>
                     </div>
                 </label>
-                <div className={styles.button}><FavouriteButton /></div>
+                <div className={styles.button}><Button type={''} name={"View Recipe"}/></div>
             </div>
         </div>
      );

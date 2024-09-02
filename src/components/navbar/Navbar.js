@@ -1,5 +1,6 @@
 import styles from './navbar.module.css';
 import logo from './picnic-basket.png';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
     return ( 
@@ -12,11 +13,12 @@ const Navbar = () => {
                 <ul className={styles.ulLinks}>
                     <li className={styles.liLinks}><a href="/">Home</a></li>
                     <li className={styles.liLinks}><a href="/recipes">Recipes</a></li>
-                    <li className={styles.liLinks}><a href="/login">Login</a></li>
+                    <li className={styles.liLinks}><Link to="/login">Login</Link></li>
+                    <li className={styles.liLinks}><Link to="/signup">SignUp</Link></li>
                 </ul>
             </div>
         </nav>
      );
 }
- 
+
 export default Navbar;

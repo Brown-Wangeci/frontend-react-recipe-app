@@ -1,21 +1,35 @@
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
 
+
+.tag{
+    padding: 0px 100px;
+    position: absolute;
+    top: 1%;
+    right: -28.5%;
+    transform: rotateZ(45deg);
+    background-color: rgba(59, 100, 139, 0.959);
+    font-family: "Caveat", cursive;
+    font-size: 2em;
+    text-align: center;
+    margin: 20px;
+}
 .form{
+    overflow: hidden;
+    position: relative;
     font-family: "Gochi Hand", cursive;
     padding: 20px;
-    border: 1px solid #ccc;
     box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.2);
     border-radius: 5px;
     margin: auto;
-    
 }
 .fieldSet{
-    border: 5px dotted rgba(0, 0, 0, 0.5);
+    border: 4px dotted rgba(0, 0, 0, 0.5);
+    padding: 20px 30px;
     min-width: 300px;
     min-height: 400px;
 }
 .legend{
-    font-size: 2.5em;
+    font-size: 2em;
 }
 .label ,.input{
     display: block;
@@ -27,9 +41,9 @@
 .input{
     outline: none;
     border: none;
-    font-size: 1.5em;
+    font-size: 1.1em;
     width: 90%;
-    padding: 5px;
+    padding: 10px 5px;
     background-color: white;
 }
 .input:focus{
@@ -74,8 +88,4 @@
     color: rgb(37, 117, 37);
     text-decoration: underline;
     cursor: pointer;
-}
-.main{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
 }

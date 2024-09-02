@@ -6,7 +6,7 @@
     margin: 10px;
     border-radius: 11px;
 }
-.bla{
+.innerCard{
     margin: 0;
     width: 330px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
@@ -18,7 +18,7 @@
     width: 330px;
     height: 247.50px;
 }
-.tags{
+.tagsContainer{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -31,22 +31,22 @@
     font-size: 15px;
     font-weight: 500;
 }
-.area{
+.cuisine{
     background-color: #ffd43b;
 }
 .category{
     background-color: #94d82d;
 }
-.name{
+.mealName{
     font-size: 20px;
     font-weight: 600;
     margin: 10px;
     text-align: center;
 }
-.input{
+.checkBox{
     display: none;
 }
-.favorite{
+.favoriteLabel{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -75,16 +75,17 @@
     transform: translateY(10px);
 }
 
-.input:checked +.favorite .favoriteText .added{
+.checkBox:checked +.favoriteLabel .favoriteText .added{
     transform: translateY(-11px);
 }
-.input:checked +.favorite .favoriteText .add{
+.checkBox:checked +.favoriteLabel .favoriteText .add{
     transform: translateY(70px);
 }
-.input:checked +.favorite .icon{
+.checkBox:checked +.favoriteLabel .icon{
     animation: heartAnimation 1.5s;
 }
 .button{
+    width: 40%;
     margin: 10px auto 25px auto;
     text-align: center;
 }

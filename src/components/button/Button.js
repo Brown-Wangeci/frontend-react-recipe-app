@@ -1,14 +1,14 @@
 import styles from './Button.module.css';
 
 
-const FavouriteButton = () => {
+const Button = ({name = 'Button', type = 'submit'}) => {
     return ( 
-        <button className={styles.button}>
+        <button type={type} className={styles.button}>
             <div className={styles.buttonText}>
-                View Recipe
+                {name}
             </div>
         </button>
      );
 }
  
-export default FavouriteButton;
+export default Button;
