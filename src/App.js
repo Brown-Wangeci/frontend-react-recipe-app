@@ -7,6 +7,7 @@ import RecipesPage from './pages/recipesPage/RecipesPage.js';
 import Footer from './components/footer/Footer.js';
 import ResetPasswordPage from './pages/resetPasswordPage/ResetPasswordPage.js';
 import LandingPage from './pages/landingPage/LandingPage.js';
+import CreateRecipePage from './pages/createRecipePage/CreateRecipePage.js';
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
               <Route path='login' element={<LogInPage/>}/>
               <Route path='signup' element={<SignUpPage/>}/>
               <Route path='recipes' element={<RecipesPage/>}/>
+              <Route path='create-recipe' element={<CreateRecipePage/>}/>
               <Route path='reset-password' element={<ResetPasswordPage/>}/>
             </Route>
           </Routes>

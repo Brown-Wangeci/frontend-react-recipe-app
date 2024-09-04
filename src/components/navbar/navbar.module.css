@@ -27,10 +27,10 @@
 .logoSection:hover{
     cursor: pointer;
 }
-.logoSection:hover .h1{
+.logoSection .h1{
     color: #e7bc23;
 }
-.logoSection:hover .h1 > span{
+.logoSection .h1 > span{
     color: #7cb427;
 }
 .logo{

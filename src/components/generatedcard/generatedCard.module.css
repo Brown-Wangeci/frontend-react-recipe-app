@@ -5,6 +5,11 @@
     height: fit-content;
     margin: 10px;
     border-radius: 11px;
+    transform-origin: bottom left;
+    animation: fade-in linear;
+    animation-timeline: view();
+    animation-range-start: cover;
+    animation-range-end: 300px;
 }
 .innerCard{
     margin: 0;
@@ -106,5 +111,15 @@
     }
     100% {
      transform: scale(1);
+    }
+}
+@keyframes fade-in {
+    from {
+        scale: 0.7;
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+        scale: 1;
     }
 }

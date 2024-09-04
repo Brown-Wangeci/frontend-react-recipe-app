@@ -1,0 +1,43 @@
+.hamburgericon{
+    display: none;
+}
+.hamburgerIconLabelWrapper{
+    cursor: pointer;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+.hamburgerIconLabel{
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    border: double 5px rgba(0, 0, 0, 0.764);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.line{
+    transform-origin: left;
+    transition: 0.3s;
+    height: 3.5px;
+    width: 60%;
+    background-color: black;
+    border-radius: 5px;
+    margin: 2.5px;
+}
+.hamburgericon:checked + .hamburgerIconLabelWrapper .hamburgerIconLabel .line1{
+    transform:  translateX(16.5%) translateY(-79%) rotateZ(45deg);
+    width: 80%;
+}
+.hamburgericon:checked + .hamburgerIconLabelWrapper .hamburgerIconLabel .line2{
+    opacity: 0;
+}
+.hamburgericon:checked + .hamburgerIconLabelWrapper .hamburgerIconLabel .line3{
+    transform: translateX(16.5%) translateY(79%) rotateZ(-45deg);
+    width: 80%;
+}
+
