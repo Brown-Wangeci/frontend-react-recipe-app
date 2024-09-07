@@ -8,6 +8,7 @@ import Footer from './components/footer/Footer.js';
 import ResetPasswordPage from './pages/resetPasswordPage/ResetPasswordPage.js';
 import LandingPage from './pages/landingPage/LandingPage.js';
 import CreateRecipePage from './pages/createRecipePage/CreateRecipePage.js';
+import IndividualRecipePage from './pages/individualRecipePage/IndividualRecipePage.js';
 
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
               <Route path='recipes' element={<RecipesPage/>}/>
               <Route path='create-recipe' element={<CreateRecipePage/>}/>
               <Route path='reset-password' element={<ResetPasswordPage/>}/>
+              <Route path='recipe' element={<IndividualRecipePage/>}/>
             </Route>
           </Routes>
         </div>

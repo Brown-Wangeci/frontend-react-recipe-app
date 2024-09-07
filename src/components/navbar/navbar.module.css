@@ -9,7 +9,7 @@
     width: 80%;
     height: 100px;
     margin: auto;
-    padding: 10px 20px;
+    padding: 0px 20px;
     border: 1px solid #333;
     color: #333;
     background: rgba(255, 255, 255, 0.25);
@@ -41,24 +41,38 @@
     font-family: "Gochi Hand", cursive;
     font-size: 2em;
 }
+.navlinks{
+    height: 100%;
+}
 .ulLinks{
+    height: 100%;
     font-family: "Gochi Hand", cursive;
     display: flex;
-    gap: 20px;
     list-style-type:none;
 }
+.liLinks{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .liLinks > a{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 5px 10px;
     text-decoration: none;
     color: #333;
 }
-.liLinks:hover a{
-    text-decoration: underline;
-    text-decoration-color: #7cb427;
-    text-decoration-skip-ink: none;
-    text-decoration-style: wavy;
-    text-underline-offset: 10px;
-}
+.liLinks:hover{
+    background-color: #7cb4271a;
+    border-bottom: solid 3px #7cb427;
+ }
+.liLinks:active{
+    background-color: #e7bd231b;
+    border-bottom: solid 3px #e7bc23;
+ }
 @media screen and (max-width: 800px){
     .navbar{
         width: 95%;

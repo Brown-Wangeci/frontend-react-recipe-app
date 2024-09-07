@@ -1,0 +1,18 @@
+.arrowDown{
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    border: double 5px black;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: bottom 0.5s;
+}
+.arrowImage{
+    width: 100%;
+    height: 100%;
+}
+.arrowDown:hover{
+    bottom: 25px;
+}

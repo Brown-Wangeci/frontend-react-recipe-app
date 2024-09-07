@@ -1,18 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
 .card{
-    min-width: 350px;
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     font-family: "Caveat", cursive;
-    padding: 0 20px;
+    /* background-color: antiquewhite; */
 }
 .h1{
     font-family: "Gochi Hand", cursive;
-    margin: 0 0 20px 0;
+    margin: 0 0 10px 20px;
     font-size: 2em;
-    text-align: center;
-    text-decoration: underline;
-    text-decoration-skip-ink: none;
-    text-decoration-style: wavy;
-    text-underline-offset: 10px;
 }
 .ul{
     list-style-type: none;
@@ -20,11 +19,15 @@
     margin: 0;
 }
 .li{
-    font-size: 1.5em;
-    text-wrap: nowrap;
-    width: 100%;
-    margin: 10px auto;
-    padding-bottom: 5px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.spanList{
+    font-size: 1.6em;
+    margin-block: 10px;
     border-bottom: dotted;
-    text-align: start;
+}
+.bullet{
+    width: 20px;
 }

@@ -1,5 +1,6 @@
 import styles from './landingpage.module.css';
 import { useNavigate } from 'react-router-dom';
+import HamburgerIcon from '../../components/hamburgerIcon/HamburgerIcon';
 
 const LandingPage = () => {
 
@@ -7,6 +8,7 @@ const LandingPage = () => {
 
     return ( 
         <div className={styles.landingPage}>
+            <HamburgerIcon/>
             <h1 className={styles.title}>Welcome to Cosy Recipes</h1>
             <p className={styles.description}>The best place to find and share recipes</p>
             <div className={styles.buttons}>
