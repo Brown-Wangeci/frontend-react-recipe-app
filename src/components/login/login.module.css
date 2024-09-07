@@ -89,28 +89,20 @@
 }
 .signUp > a:hover{
     color: rgb(37, 117, 37);
-    text-decoration: underline;
+    text-decoration: underline wavy;
+    text-decoration-skip-ink: none;
+    text-underline-offset: 8px;
     cursor: pointer;
 }
 
 @keyframes pop-up {
     0% {
-        transform: rotateZ(0deg) scale(0);
-    }
-    20% {
-        transform: rotateZ(144deg) scale(0.2);
-    }
-    40% {
-        transform: rotateZ(288deg) scale(0.4);
-    }
-    60% {
-        transform: rotateZ(432deg) scale(0.6);
-    }
-    80% {
-        transform: rotateZ(576deg) scale(0.8);
+        opacity: 0;
+        /* transform: scale(0); */
     }
     100% {
-        transform: rotateZ(720deg) scale(1);
+        opacity: 1;
+        /* transform: scale(1); */
     }
 
 }

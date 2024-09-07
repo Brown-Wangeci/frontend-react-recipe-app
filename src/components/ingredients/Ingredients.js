@@ -1,16 +1,12 @@
 import styles from './ingredients.module.css';
-import { RecipeMockData } from '../../mockdata/RecipeData';
 import bullet from './arrow-right.png';
 
-const Ingredients = () => {
-
-    const ingredients = RecipeMockData[0].ingredients;
-
+const Ingredients = ({ingredients}) => {
 
     return ( 
         <div className={styles.card}>
             <h1 className={styles.h1}>Ingredients</h1>
-            <hr />
+            <hr className={styles.hr}/>
             {ingredients && 
             <ul className={styles.ul}>
                 {ingredients.map( (ingredient, index) => 

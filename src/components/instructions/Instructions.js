@@ -1,15 +1,13 @@
 import styles from './instructions.module.css';
-import { RecipeMockData } from '../../mockdata/RecipeData';
 import bullet from './check-mark.png';
 
-const Instructions = () => {
-    const instructions = RecipeMockData[0].instructions;
+const Instructions = ({instructions}) => {
 
 
     return ( 
         <div className={styles.instructions}>
             <h1 className={styles.h1}>Instructions</h1>
-            <hr />
+            <hr className={styles.hr}/>
             {
                 instructions && 
                 <ol className={styles.ol}>

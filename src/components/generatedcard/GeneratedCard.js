@@ -36,7 +36,7 @@ const GeneratedCard = () => {
                         <span className={`${styles.added} ${styles.options}`}>Added to Favorites</span>
                     </div>
                 </label>
-                <div className={styles.button}><Button type={''} name={"View Recipe"}/></div>
+                <div className={styles.button}><Button name={"View Recipe"}/></div>
             </div>
         </div>
      );

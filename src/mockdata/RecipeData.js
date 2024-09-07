@@ -1,6 +1,7 @@
 export const RecipeMockData = [
     {
         id: 1,
+        author: "Brown",
         title: "Grilled Chicken",
         description: "Grilled chicken with herbs and spices",
         ingredients: [
@@ -25,12 +26,14 @@ export const RecipeMockData = [
         cuisine: "Canadian",
         mealTime: "Dinner",
         method: "baked",
+        course: "main course",
+        diet: "high protein",
         published: "August 21, 2024",
         updated: "November 15, 2024",
         prepTime: "15",
         cookTime: "30",
         totalTime: "45",
         servings: "6",
-        note: "This recipe is a classic Canadian dish that is perfect for a quick and easy dinner. The grilled chicken",
+        note: "This recipe is a classic Canadian dish that is perfect for a quick and easy dinner.",
     },
 ]

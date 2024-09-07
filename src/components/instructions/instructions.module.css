@@ -13,9 +13,12 @@
     justify-content: center;
     font-family: "Gochi hand", cursive;
 }
+.hr{
+    margin: 10px 0;
+}
 .instructions h1{
     font-size: 2em;
-    margin: 0 0 10px 20px;
+    margin: 0 0 0px 20px;
 }
 .ol{
     list-style-type: none;

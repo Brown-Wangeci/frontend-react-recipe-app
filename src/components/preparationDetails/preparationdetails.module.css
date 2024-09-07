@@ -1,0 +1,26 @@
+.preparationDetails{
+    border: solid 1px rgb(128, 127, 127);
+    border-top: 10px solid #94d82d;
+    border-radius: 6px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.details{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+.detail{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+.h3{
+    border-bottom: 2px dashed rgb(183, 182, 182);
+    font-family: 'Gochi Hand', cursive;
+    font-size: 1.15em;
+}

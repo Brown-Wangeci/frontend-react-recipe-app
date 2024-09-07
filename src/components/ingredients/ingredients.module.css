@@ -5,12 +5,12 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    font-family: "Caveat", cursive;
-    /* background-color: antiquewhite; */
+}
+.hr{
+    margin: 10px 0;
 }
 .h1{
-    font-family: "Gochi Hand", cursive;
-    margin: 0 0 10px 20px;
+    margin: 0 0 0px 20px;
     font-size: 2em;
 }
 .ul{
@@ -24,7 +24,7 @@
     gap: 20px;
 }
 .spanList{
-    font-size: 1.6em;
+    font-size: 1.15em;
     margin-block: 10px;
     border-bottom: dotted;
 }

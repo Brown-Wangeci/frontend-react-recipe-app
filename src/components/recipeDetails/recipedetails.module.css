@@ -1,0 +1,84 @@
+.recipeDetailsContainer{
+    width: 100%;
+}
+.hr{
+    margin: 10px 0;
+}
+.author{
+    font-size: 15px;
+}
+.published, .updated{
+    font-size: 14px;
+    display: block;
+}
+.innerAuthor{
+    font-size: 17px;
+}
+.innerPublished, .innerUpdated{
+    font-size: 16px;
+}
+.recipeDetailsSection{
+    width: 100%;
+    margin-block: 20px;
+    display: flex;
+    gap: 50px;
+}
+.image{
+    border-radius: 11px;
+}
+.recipeDetails{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.allTags{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.tagGroupOne, .tagGroupTwo{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.tag{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    border-radius: 1000px;
+    padding: 5px 10px;
+    font-size: 15px;
+    font-weight: 500;
+}
+.cuisine{
+    background-color: #FFD966;
+}
+.category{
+    background-color: #94d82d;
+}
+.mealTime{
+    background-color: #ff6f61;
+}
+.method{
+    background-color: #d8a0eb;
+}
+.course{
+    background-color: #E97451;
+}
+.diet{
+    background-color: #98FB98;
+}
+.note{
+    display: flex;
+    gap: 5px;
+    width: 100%;
+    max-width: 350px;
+}
+.noteContent{
+    font-size: 1.1em;
+}
+.asterisk{
+    height: 30px;
+    width: 30px;
+}
