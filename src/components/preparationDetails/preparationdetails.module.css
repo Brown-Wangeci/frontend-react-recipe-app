@@ -20,7 +20,8 @@
     gap: 10px;
 }
 .h3{
-    border-bottom: 2px dashed rgb(183, 182, 182);
+    width: fit-content;
+    border-bottom: 2px dashed rgb(141, 141, 141);
     font-family: 'Gochi Hand', cursive;
     font-size: 1.15em;
 }

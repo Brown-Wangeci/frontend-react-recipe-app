@@ -32,7 +32,7 @@ export const RecipeMockData = [
         updated: "November 15, 2024",
         prepTime: "15",
         cookTime: "30",
-        totalTime: "45",
+        budget: "600",
         servings: "6",
         note: "This recipe is a classic Canadian dish that is perfect for a quick and easy dinner.",
     },

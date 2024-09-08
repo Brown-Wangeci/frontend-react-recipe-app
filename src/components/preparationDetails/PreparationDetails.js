@@ -16,12 +16,12 @@ const PreparationDetails = ({recipe}) => {
                         <p className={styles.p}>{recipe.cookTime} minutes</p>
                     </div>
                     <div className={styles.detail}>
-                        <h3 className={styles.h3}>Total Time</h3>
-                        <p className={styles.p}>{recipe.totalTime} minutes</p>
+                        <h3 className={styles.h3}>Budget</h3>
+                        <p className={styles.p}>Ksh. {recipe.budget}</p>
                     </div>
                     <div className={styles.detail}>
                         <h3 className={styles.h3}>Servings</h3>
-                        <p className={styles.p}>{recipe.servings}</p>
+                        <p className={styles.p}>{recipe.servings} people</p>
                     </div>
                 </div>
             }
