@@ -4,11 +4,11 @@ import Instructions from '../../components/instructions/Instructions';
 import ArrowDown from '../../components/arrowDown/ArrowDown';
 import { RecipeMockData } from '../../mockdata/RecipeData';
 import RecipeDetails from '../../components/recipeDetails/RecipeDetails';
-// import { useEffect, useRef, useState } from 'react';
 
 
 const IndividualRecipePage = () => {
     const recipe = RecipeMockData[0];
+    
 
     return ( 
         <div className={styles.individualRecipePage}>
@@ -21,7 +21,7 @@ const IndividualRecipePage = () => {
                     <Instructions instructions={recipe.instructions}/>
                 </section>
             </div>
-            <div className={`${styles.scrollArrow} ${styles.bounce}`} ><ArrowDown/></div>
+            <ArrowDown bottom='20px' left='20px'/>
         </div>
      );
 }

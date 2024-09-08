@@ -1,3 +1,4 @@
+import ArrowDown from '../../components/arrowDown/ArrowDown';
 import GeneratedCard from '../../components/generatedcard/GeneratedCard';
 import styles from './recipespage.module.css';
 
@@ -34,6 +35,7 @@ const RecipesPage = () => {
             <GeneratedCard/>
             <GeneratedCard/>
             <GeneratedCard/>
+            <ArrowDown bottom='20px' left='20px'/>
         </div>
      );
 }
