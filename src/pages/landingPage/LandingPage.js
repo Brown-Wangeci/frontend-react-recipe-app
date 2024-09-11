@@ -1,20 +1,44 @@
 import styles from './landingpage.module.css';
-import { useNavigate } from 'react-router-dom';
-import HamburgerIcon from '../../components/hamburgerIcon/HamburgerIcon';
+import HeroSection from '../../components/heroSection/HeroSection';
+import Confetti from 'react-confetti';
+import { useEffect, useState } from 'react';
 
 const LandingPage = () => {
+    const [showConfetti, setShowConfetti] = useState(true);
+    const [windowSize, setWindowSize] = useState({
+        width: window.innerWidth,
+        height: window.innerHeight
+    });
 
-    const navigate = useNavigate();
+    const handleResize = () => {
+        setWindowSize({
+            width: window.innerWidth,
+            height: window.innerHeight
+        });
+    }
+
+    setTimeout(()=>{
+        setShowConfetti(false);
+    }
+    , 1000 )
+
+    useEffect(()=>{
+        window.addEventListener('resize', handleResize);
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        }
+    },[
+        windowSize.width,
+        windowSize.height
+    ])
 
     return ( 
         <div className={styles.landingPage}>
-            <HamburgerIcon/>
-            <h1 className={styles.title}>Welcome to Cosy Recipes</h1>
-            <p className={styles.description}>The best place to find and share recipes</p>
-            <div className={styles.buttons}>
-                <button className={styles.button} onClick={()=>navigate('/login')} >Login</button>
-                <button className={styles.button} onClick={()=>navigate('/signup')} >Sign Up</button>
-            </div>
+            {showConfetti && <Confetti
+                width={windowSize.width}
+                height={windowSize.height}
+            /> }
+            <HeroSection/>
         </div>
      );
 }

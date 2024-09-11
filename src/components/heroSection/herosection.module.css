@@ -1,0 +1,125 @@
+.heroSection{
+    width: 100%;
+    min-height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* background-color:aliceblue; */
+}
+.leftSection{
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    /* background-color: blue; */
+}
+.rightSection{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 20px;
+    padding: 20px;
+}
+.h1{
+    color: #e7bc23;
+}
+.h1 > .recipeSpan{
+    color: #7cb427;
+}
+.burgerImage, .tacoImage{
+    width: 300px;
+    position: absolute;
+}
+.grandmaImage{
+    height: auto;
+    width: 550px;
+}
+.tacoImage{
+    top: 50px;
+    right: 50px;
+}
+.burgerImage{
+    bottom: 50px;
+    left: 50px;
+}
+.button{
+    border: 5px double ;
+    padding: 10px;
+    background: transparent;
+    font-family: "Ubuntu", sans-serif;
+    font-size: larger;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    /* transform-origin: left; */
+}
+.loginButton{
+    border-color: #7cb427;
+    color: #7cb427;
+}
+.signUpButton{
+    border-color:#e7bc23;
+    color:#e7bc23;
+}
+.button:hover{
+    gap: px;
+}
+.button:hover .arrowImage{
+    width: 20px;
+}
+.arrowImage{
+    width: 0px;
+}
+.button:active{
+    box-shadow: inset 4px 4px 6px -1px rgba(0,0,0,0.2),
+	            inset -4px -4px 6px -1px rgba(255,255,255,0.7),
+	            -0.5px -0.5px 0px rgba(255,255,255,1),
+                0.5px 0.5px 0px rgba(0,0,0,0.15),
+	            0px 12px 10px -10px rgba(0,0,0,0.05);
+    transform: scale(0.99);
+}
+.buttons{
+    width: 60%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+.description{
+    line-height: 20px;
+    font-size: 20px;
+    font-weight: 600;
+    color: rgb(64, 64, 64);
+    border-bottom: 2px dotted rgb(64, 64, 64);
+    padding-bottom: 5px;
+}
+.usersSection{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+.users{
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+.addSign{
+    width: 40px;
+}
+.usersNumber{
+    font-size: 20px;
+    font-weight: 600;
+}
+.profileimages{
+    display: flex;
+}
+.profileImage{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    padding: 3px;
+    background: url('./assets/squared-watercolor-paper_1194-5735.avif');
+    margin-right: -20px;
+}
