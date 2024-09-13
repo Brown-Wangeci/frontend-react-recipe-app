@@ -1,5 +1,5 @@
 import styles from './testimonials.module.css';
-import userImage from './assets/userImages/linkedinpic2.jpg';
+// import brownImage from './assets/userImages/linkedinpic2.jpg';
 import eugeneImage from './assets/userImages/eugene-image.jpg';
 import daniellaImage from './assets/userImages/daniella-image.jpg';
 import yabannImage from './assets/userImages/yabann-image.jpg';

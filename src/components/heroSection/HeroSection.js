@@ -2,7 +2,7 @@ import styles from './herosection.module.css';
 import grandmaImage from './assets/peopleImages/recipe-screenshot-removebg-preview.png';
 import familyImage from './assets/peopleImages/wes3-pic-removebg-preview.png';
 import family2Image from './assets/peopleImages/wesonga-pic-removebg-preview.png';
-import grandmaAndGirlImage from './assets/peopleImages/AdobeStock_938365139_Preview__1_-transformed-removebg-preview.png';
+// import grandmaAndGirlImage from './assets/peopleImages/AdobeStock_938365139_Preview__1_-transformed-removebg-preview.png';
 import ladyImage from './assets/peopleImages/AdobeStock_649050375_Preview-removebg-preview.png';
 import guyAndLadyImage from './assets/peopleImages/etsy-screenshot-removebg-preview.png';
 import guyImage from './assets/peopleImages/wes4-pic-removebg-preview.png';
@@ -32,7 +32,7 @@ const HeroSection = () => {
         }, 1000 * 6);
     
         return () => clearInterval(interval); 
-      }, []);
+      }, [images.length]);
 
     return ( 
         <div className={styles.heroSection}>

@@ -1,45 +1,13 @@
 import styles from './landingpage.module.css';
 import HeroSection from '../../components/heroSection/HeroSection';
-import Confetti from 'react-confetti';
-import { useEffect, useState } from 'react';
+// import Confetti from 'react-confetti';
 import Offered from '../../components/offered/Offered';
 import Testimonials from '../../components/testimonials/Testimonials';
 
 const LandingPage = () => {
-    const [showConfetti, setShowConfetti] = useState(true);
-    const [windowSize, setWindowSize] = useState({
-        width: window.innerWidth,
-        height: window.innerHeight
-    });
-
-    const handleResize = () => {
-        setWindowSize({
-            width: window.innerWidth,
-            height: window.innerHeight
-        });
-    }
-
-    setTimeout(()=>{
-        setShowConfetti(false);
-    }
-    , 1000 * 0)
-
-    useEffect(()=>{
-        window.addEventListener('resize', handleResize);
-        return () => {
-            window.removeEventListener('resize', handleResize);
-        }
-    },[
-        windowSize.width,
-        windowSize.height
-    ])
 
     return ( 
         <div className={styles.landingPage}>
-            {showConfetti && <Confetti
-                width={windowSize.width}
-                height={windowSize.height}
-            /> }
             <HeroSection/>
             <Offered/>
             <Testimonials/>

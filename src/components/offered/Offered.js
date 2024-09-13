@@ -1,8 +1,8 @@
 import styles from './offered.module.css';
-import foodImage from './assets/foodImages/floating-food-transformed-removebg-preview.png';
-import foodImage2 from './assets/foodImages/food-image-removebg-preview.png';
+// import foodImage from './assets/foodImages/floating-food-transformed-removebg-preview.png';
+// import foodImage2 from './assets/foodImages/food-image-removebg-preview.png';
 import foodImage3 from './assets/foodImages/food-image3-transformed-removebg-preview.png';
-import foodImage5 from './assets/foodImages/food-image5-transformed-removebg-preview.png';
+// import foodImage5 from './assets/foodImages/food-image5-transformed-removebg-preview.png';
 
 
 const Offered = () => {
