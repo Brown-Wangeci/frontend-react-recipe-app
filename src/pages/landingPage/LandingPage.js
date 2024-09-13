@@ -2,6 +2,8 @@ import styles from './landingpage.module.css';
 import HeroSection from '../../components/heroSection/HeroSection';
 import Confetti from 'react-confetti';
 import { useEffect, useState } from 'react';
+import Offered from '../../components/offered/Offered';
+import Testimonials from '../../components/testimonials/Testimonials';
 
 const LandingPage = () => {
     const [showConfetti, setShowConfetti] = useState(true);
@@ -20,7 +22,7 @@ const LandingPage = () => {
     setTimeout(()=>{
         setShowConfetti(false);
     }
-    , 1000 )
+    , 1000 * 0)
 
     useEffect(()=>{
         window.addEventListener('resize', handleResize);
@@ -39,6 +41,8 @@ const LandingPage = () => {
                 height={windowSize.height}
             /> }
             <HeroSection/>
+            <Offered/>
+            <Testimonials/>
         </div>
      );
 }

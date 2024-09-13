@@ -10,6 +10,12 @@ import { useNavigate } from 'react-router-dom';
 import arrowImage from './assets/icons/arrow-right.png';
 import arrowImage2 from './assets/icons/arrow-right (1).png';
 import profile from './assets/peopleImages/linkedinpic2.jpg';
+import eugeneImage from './assets/peopleImages/eugene-image.jpg';
+import kevinImage from './assets/peopleImages/kevin-image.jpg';
+import sharletImage from './assets/peopleImages/sharlet-image.jpg';
+import daniellaImage from './assets/peopleImages/daniella-image.jpg';
+import yabannImage from './assets/peopleImages/yabann-image.jpg';
+import faithImage from './assets/peopleImages/faith-image.jpg';
 import addSign from './assets/icons/add_24dp_75FB4C_FILL0_wght400_GRAD0_opsz24.png';
 import { useState, useEffect } from 'react';
 
@@ -18,7 +24,7 @@ const HeroSection = () => {
     const navigate = useNavigate();
     const [currentIndex, setCurrentIndex] = useState(0);
 
-    const images = [grandmaImage, grandmaAndGirlImage, ladyImage, guyAndLadyImage, guyImage, familyImage, family2Image];
+    const images = [grandmaImage, ladyImage, guyAndLadyImage, guyImage, familyImage, family2Image];
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -46,17 +52,18 @@ const HeroSection = () => {
                     <button className={`${styles.button} ${styles.loginButton}`} onClick={()=>navigate('/login')} >Login <img className={styles.arrowImage} src={arrowImage} alt="arrow" /></button>
                     <button className={`${styles.button} ${styles.signUpButton}`} onClick={()=>navigate('/signup')} >Sign Up <img className={styles.arrowImage} src={arrowImage2} alt="arrow" /></button>
                 </div>
+                <div className={styles.viewRecipesButton} onClick={()=>{navigate('/recipes')}}>View Our Recipes</div>
                 <div className={styles.usersSection}>
                     <div className={styles.profileimages}>
-                        <img className={styles.profileImage} src="https://gateremark.github.io/Makifoods/img/customers/customer-1.jpg" alt="Customer photo"/>
-                        <img className={styles.profileImage} src="https://gateremark.github.io/Makifoods/img/customers/customer-3.jpg" alt='user-profile'/>
-                        <img className={styles.profileImage} src="https://gateremark.github.io/Makifoods/img/customers/customer-2.jpg" alt='user-profile'/>
-                        <img className={styles.profileImage} src="https://gateremark.github.io/Makifoods/img/customers/customer-4.jpg" alt='user-profile'/>
-                        <img className={styles.profileImage} src="https://gateremark.github.io/Makifoods/img/customers/customer-5.jpg" alt='user-profile'/>
-                        <img className={styles.profileImage} src="https://gateremark.github.io/Makifoods/img/customers/customer-6.jpg" alt='user-profile'/>
                         <img className={styles.profileImage} src={profile} alt='user-profile'/>
+                        <img className={styles.profileImage} src={eugeneImage} alt='user-profile'/>
+                        <img className={styles.profileImage} src={daniellaImage} alt='user-profile'/>
+                        <img className={styles.profileImage} src={yabannImage} alt='user-profile'/>
+                        <img className={styles.profileImage} src={kevinImage} alt='user-profile'/>
+                        <img className={styles.profileImage} src={sharletImage} alt='user-profile'/>
+                        <img className={styles.profileImage} src={faithImage} alt='user-profile'/>
                     </div>
-                    <div className={styles.users}><img className={styles.addSign} src={addSign} alt="add-sign" /> <span className={styles.usersNumber}> 1200 Families</span></div>
+                    <div className={styles.users}><span className={styles.usersNumber}>1200</span><img className={styles.addSign} src={addSign} alt="add-sign" /> <span className={styles.families}>Users</span></div>
                 </div>
             </div>
         </div>

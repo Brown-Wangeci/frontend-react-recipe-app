@@ -1,17 +1,17 @@
 .heroSection{
     width: 100%;
-    min-height: 100%;
+    /* height: 650px; */
+    min-height: 650px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    /* background-color:aliceblue; */
+    /* background-color: blueviolet; */
 }
 .leftSection{
-    overflow: hidden;
-    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
+    height: 100%;
     /* background-color: blue; */
 }
 .rightSection{
@@ -21,6 +21,7 @@
     align-items: start;
     gap: 20px;
     padding: 20px;
+    /* background-color: #699b1e; */
 }
 .h1{
     color: #e7bc23;
@@ -33,7 +34,7 @@
     position: absolute;
 }
 .grandmaImage{
-    height: auto;
+    height: 500px;
     width: 550px;
 }
 .tacoImage{
@@ -44,7 +45,8 @@
     bottom: 50px;
     left: 50px;
 }
-.button{
+.button, .viewRecipesButton{
+    cursor: pointer;
     border: 5px double ;
     padding: 10px;
     background: transparent;
@@ -53,27 +55,38 @@
     font-weight: 500;
     display: flex;
     align-items: center;
-    width: fit-content;
-    /* transform-origin: left; */
+    justify-content: center;
+    width: 100%;
 }
 .loginButton{
-    border-color: #7cb427;
-    color: #7cb427;
+    border-color: #699b1e;
+    color: #699b1e;
 }
 .signUpButton{
-    border-color:#e7bc23;
-    color:#e7bc23;
+    border-color:#cca827;
+    color:#cca827;
+}
+.viewRecipesButton{
+    width: 60%;
+    border-color:rgb(60, 60, 60);
+    color: rgb(60, 60, 60);
+    transition: transform 0.2s ease;
+}
+.viewRecipesButton:hover{
+    transform: scale(1.03);
 }
 .button:hover{
-    gap: px;
+    gap: 5px;
 }
 .button:hover .arrowImage{
     width: 20px;
 }
 .arrowImage{
     width: 0px;
+    transition: width 0.2s ease;
 }
-.button:active{
+.button:active,
+.viewRecipesButton:active{
     box-shadow: inset 4px 4px 6px -1px rgba(0,0,0,0.2),
 	            inset -4px -4px 6px -1px rgba(255,255,255,0.7),
 	            -0.5px -0.5px 0px rgba(255,255,255,1),
@@ -91,9 +104,10 @@
     line-height: 20px;
     font-size: 20px;
     font-weight: 600;
-    color: rgb(64, 64, 64);
-    border-bottom: 2px dotted rgb(64, 64, 64);
+    color: transparent;
+    border-bottom: 2px dotted transparent;
     padding-bottom: 5px;
+    animation: appear 2s ease forwards;
 }
 .usersSection{
     display: flex;
@@ -103,13 +117,12 @@
 .users{
     display: flex;
     align-items: center;
-    gap: 3px;
 }
 .addSign{
     width: 40px;
 }
-.usersNumber{
-    font-size: 20px;
+.usersNumber, .families{
+    font-size: 22px;
     font-weight: 600;
 }
 .profileimages{
@@ -122,4 +135,11 @@
     padding: 3px;
     background: url('./assets/squared-watercolor-paper_1194-5735.avif');
     margin-right: -20px;
+}
+
+@keyframes appear {
+    to{
+        color: rgb(64, 64, 64);
+        border-bottom: 2px dotted rgb(64, 64, 64);
+    }
 }

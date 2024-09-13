@@ -71,6 +71,7 @@ const Login = () => {
                         Don't have an account? <Link to="/signup">Sign Up</Link>
                     </div>
                 </fieldset>
+                <div className={styles.tag}>Log In</div>
             </form>
         </div>
      );

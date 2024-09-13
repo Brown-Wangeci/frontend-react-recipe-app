@@ -1,0 +1,13 @@
+.testimonials{
+    width: 100%;
+    padding-block: 50px;
+    /* background-color: aliceblue; */
+}
+.title{
+    text-align: center;
+    /* font-size: 2rem; */
+    color: #507912;
+}
+.hr{
+    margin-block: 15px;
+}

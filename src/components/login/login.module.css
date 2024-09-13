@@ -1,12 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
 
+.tag{
+    padding: 0px 100px;
+    position: absolute;
+    top: 0.8%;
+    right: -28.9%;
+    transform: rotateZ(45deg);
+    background: linear-gradient( #a1841d, #eec738, #a1841d);
+    font-family: "Caveat", cursive;
+    font-size: 2em;
+    text-align: center;
+    margin: 20px;
+}
 .form{
+    overflow: hidden;
+    position: relative;
     font-family: "Gochi Hand", cursive;
     padding: 20px;
     box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.2);
     border-radius: 5px;
     margin: auto;
-    animation: pop-up 0.5s ease-out forwards;
+    animation: pop-up 1s ease-out forwards;
 }
 .fieldSet{
     border: 4px dotted rgba(0, 0, 0, 0.5);
