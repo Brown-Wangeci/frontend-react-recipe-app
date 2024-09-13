@@ -10,12 +10,12 @@ import { useNavigate } from 'react-router-dom';
 import arrowImage from './assets/icons/arrow-right.png';
 import arrowImage2 from './assets/icons/arrow-right (1).png';
 import profile from './assets/peopleImages/linkedinpic2.jpg';
-import eugeneImage from './assets/peopleImages/eugene-image.jpg';
-import kevinImage from './assets/peopleImages/kevin-image.jpg';
-import sharletImage from './assets/peopleImages/sharlet-image.jpg';
-import daniellaImage from './assets/peopleImages/daniella-image.jpg';
-import yabannImage from './assets/peopleImages/yabann-image.jpg';
-import faithImage from './assets/peopleImages/faith-image.jpg';
+import eugeneImage from './assets/peopleImages/friendsImages/eugene-image.jpg';
+import kevinImage from './assets/peopleImages/friendsImages/kevin-image.jpg';
+import sharletImage from './assets/peopleImages/friendsImages/sharlet-image.jpg';
+import daniellaImage from './assets/peopleImages/friendsImages/daniella-image.jpg';
+import yabannImage from './assets/peopleImages/friendsImages/yabann-image.jpg';
+import faithImage from './assets/peopleImages/friendsImages/faith-image.jpg';
 import addSign from './assets/icons/add_24dp_75FB4C_FILL0_wght400_GRAD0_opsz24.png';
 import { useState, useEffect } from 'react';
 

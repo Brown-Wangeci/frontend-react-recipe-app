@@ -9,6 +9,7 @@ const Offered = () => {
     return ( 
         <div className={styles.offered}>
             <h1 className={styles.title}>Our Offers</h1>
+            <h3 className={styles.subTitle}>We offer love and convenience</h3>
             <hr className={styles.hr}/>
             <div className={styles.content}>
                 <section className={styles.upperOffers}>

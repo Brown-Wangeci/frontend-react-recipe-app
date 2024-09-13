@@ -8,6 +8,9 @@
     /* font-size: 2rem; */
     color: #507912;
 }
+.subTitle{
+    text-align: center;
+}
 .hr{
     margin-block: 15px;
 }

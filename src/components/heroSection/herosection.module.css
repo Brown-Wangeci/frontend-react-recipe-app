@@ -22,6 +22,7 @@
     gap: 20px;
     padding: 20px;
     /* background-color: #699b1e; */
+    animation: appear 1s ease;
 }
 .h1{
     color: #e7bc23;
@@ -104,10 +105,9 @@
     line-height: 20px;
     font-size: 20px;
     font-weight: 600;
-    color: transparent;
-    border-bottom: 2px dotted transparent;
+    color: rgb(64, 64, 64);
+    border-bottom: 2px dotted rgb(64, 64, 64);
     padding-bottom: 5px;
-    animation: appear 2s ease forwards;
 }
 .usersSection{
     display: flex;
@@ -138,8 +138,10 @@
 }
 
 @keyframes appear {
+    from{
+        opacity: 0;
+    }
     to{
-        color: rgb(64, 64, 64);
-        border-bottom: 2px dotted rgb(64, 64, 64);
+        opacity: 1;
     }
 }
