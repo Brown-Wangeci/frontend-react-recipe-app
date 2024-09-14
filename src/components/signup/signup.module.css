@@ -20,7 +20,6 @@
     box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.2);
     border-radius: 5px;
     margin: auto;
-    animation: pop-up 1s ease-out forwards;
 }
 .fieldSet{
     border: 4px dotted rgba(0, 0, 0, 0.5);
@@ -89,17 +88,4 @@
     text-decoration-skip-ink: none;
     text-underline-offset: 8px;
     cursor: pointer;
-}
-
-
-@keyframes pop-up {
-    0% {
-        opacity: 0;
-        /* transform: scale(0); */
-    }
-    100% {
-        opacity: 1;
-        /* transform: scale(1); */
-    }
-
 }

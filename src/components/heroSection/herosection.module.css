@@ -18,11 +18,11 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: start;
+    align-items: flex-start;
     gap: 20px;
     padding: 20px;
     /* background-color: #699b1e; */
-    animation: appear 1s ease;
+    /* animation: appear 1s ease; */
 }
 .h1{
     color: #e7bc23;
@@ -30,21 +30,13 @@
 .h1 > .recipeSpan{
     color: #7cb427;
 }
-.burgerImage, .tacoImage{
+/* .burgerImage, .tacoImage{
     width: 300px;
     position: absolute;
-}
+} */
 .grandmaImage{
     height: 500px;
     width: 550px;
-}
-.tacoImage{
-    top: 50px;
-    right: 50px;
-}
-.burgerImage{
-    bottom: 50px;
-    left: 50px;
 }
 .button, .viewRecipesButton{
     cursor: pointer;

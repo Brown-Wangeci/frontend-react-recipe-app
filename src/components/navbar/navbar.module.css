@@ -25,10 +25,10 @@
     cursor: pointer;
 }
 .logoSection .h1{
-    color: #e7bc23;
+    color: #7cb427;
 }
 .logoSection .h1 > span{
-    color: #7cb427;
+    color: #e7bc23;
 }
 .logo{
     width: 65px;
