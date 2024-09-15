@@ -8,8 +8,8 @@ const RecipeDetails = ({recipe}) => {
     return ( 
         <div className={styles.recipeDetailsContainer}>
             <div className={styles.title}>
-                <h1 className={styles.h1title}>{recipe.title}</h1>
-                <span className={styles.author}>By: <span className={styles.innerAuthor}>{recipe.author}</span></span>
+                <h1 className={styles.h1title}>{recipe.name}</h1>
+                <span className={styles.author}>By: <span className={styles.innerAuthor}>{recipe.creator}</span></span>
             </div>
             <hr className={styles.hr}/>
             <div className={styles.moreTitleDetails}>
@@ -23,7 +23,7 @@ const RecipeDetails = ({recipe}) => {
                         <div  className={styles.tagGroupOne}>
                             <span className={`${styles.tag} ${styles.category}`}>{recipe.category}</span>
                             <span className={`${styles.tag} ${styles.cuisine}`}>{recipe.cuisine}</span>
-                            <span className={`${styles.tag} ${styles.mealTime}`}>{recipe.mealTime}</span>
+                            <span className={`${styles.tag} ${styles.mealTime}`}>{recipe.mealtime}</span>
                         </div>
                         <div  className={styles.tagGroupTwo}>
                             <span className={`${styles.tag} ${styles.method}`}>{recipe.method}</span>

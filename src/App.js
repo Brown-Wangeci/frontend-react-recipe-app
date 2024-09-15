@@ -28,7 +28,7 @@ function App() {
               <Route path='recipes' element={<RecipesPage/>}/>
               <Route path='create-recipe' element={<CreateRecipePage/>}/>
               <Route path='reset-password' element={<ResetPasswordPage/>}/>
-              <Route path='recipe' element={<IndividualRecipePage/>}/>
+              <Route path='recipe/:id' element={<IndividualRecipePage/>}/>
             </Route>
           </Routes>
         </div>

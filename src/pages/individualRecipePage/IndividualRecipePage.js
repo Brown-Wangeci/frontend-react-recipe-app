@@ -2,23 +2,43 @@ import styles from './individualrecipepage.module.css';
 import Ingredients from '../../components/ingredients/Ingredients';
 import Instructions from '../../components/instructions/Instructions';
 import ArrowDown from '../../components/arrowDown/ArrowDown';
-import { RecipeMockData } from '../../mockdata/RecipeData';
+// import { RecipeMockData } from '../../mockdata/RecipeData';
 import RecipeDetails from '../../components/recipeDetails/RecipeDetails';
+import { useEffect,  useState } from 'react';
+import { useParams } from 'react-router-dom';
+import axios from 'axios';
 
 
 const IndividualRecipePage = () => {
-    const recipe = RecipeMockData[0];
+    // const recipe = RecipeMockData[0];
+    const [recipeData, setRecipeData] = useState({});
+    const { id } = useParams();
+
+    const fetchRecipe = async (id) => {
+        try {
+            const response = await axios.get(`http://localhost:3001/recipes/${id}`);
+            setRecipeData(response.data);
+        } catch (error) {
+            console.error(error.message);
+        }
+    };
+
+    useEffect(() => {
+        if (id){
+            fetchRecipe(id);
+        }
+    }, [id]);
     
 
     return ( 
         <div className={styles.individualRecipePage}>
             <div className={styles.recipeContainer}>
-                <RecipeDetails recipe={recipe}/>
+                <RecipeDetails recipe={recipeData}/>
                 <section className={styles.ingredientsSection}>
-                    <Ingredients ingredients={recipe.ingredients}/>
+                    <Ingredients ingredients={recipeData.ingredients}/>
                 </section>
                 <section className={styles.instructionsSection}>
-                    <Instructions instructions={recipe.instructions}/>
+                    <Instructions instructions={recipeData.instructions}/>
                 </section>
             </div>
             <ArrowDown bottom='20px' left='20px'/>
