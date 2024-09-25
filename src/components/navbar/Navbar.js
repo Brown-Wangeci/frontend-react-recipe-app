@@ -1,4 +1,3 @@
-import HamburgerIcon from '../hamburgerIcon/HamburgerIcon';
 import styles from './navbar.module.css';
 import logo from './picnic-basket.png';
 import { Link } from 'react-router-dom';

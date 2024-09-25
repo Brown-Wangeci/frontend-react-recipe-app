@@ -5,17 +5,17 @@
     margin: 10px 0;
 }
 .author{
-    font-size: 15px;
+    font-size: 13px;
 }
 .published, .updated{
-    font-size: 14px;
+    font-size: 13px;
     display: block;
 }
 .innerAuthor{
-    font-size: 17px;
+    font-size: 15px;
 }
 .innerPublished, .innerUpdated{
-    font-size: 16px;
+    font-size: 14px;
 }
 .recipeDetailsSection{
     width: 100%;

@@ -9,12 +9,12 @@ const RecipeDetails = ({recipe}) => {
         <div className={styles.recipeDetailsContainer}>
             <div className={styles.title}>
                 <h1 className={styles.h1title}>{recipe.name}</h1>
-                <span className={styles.author}>By: <span className={styles.innerAuthor}>{recipe.creator}</span></span>
+                <span className={styles.author}>By: <span className={styles.innerAuthor}>{/*recipe.creator*/}Brown</span></span>
             </div>
             <hr className={styles.hr}/>
             <div className={styles.moreTitleDetails}>
-                <span className={styles.published}>Published:  <span className={styles.innerPublished}>{recipe.published}</span></span>
-                <span className={styles.updated}>Last updated:  <span className={styles.innerUpdated}>{recipe.updated}</span></span>
+                <span className={styles.published}>Published:  <span className={styles.innerPublished}>{recipe.updatedAt}</span></span>
+                <span className={styles.updated}>Last updated:  <span className={styles.innerUpdated}>{recipe.createdAt}</span></span>
             </div>
             <section className={styles.recipeDetailsSection}>
                 <img className={styles.image} src={recipe.image} alt={recipe.title} height='450' width='600' />
