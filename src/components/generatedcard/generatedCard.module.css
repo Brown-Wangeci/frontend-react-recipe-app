@@ -18,10 +18,21 @@
     border: 3px dashed gray;
     overflow: hidden;
 }
-.image{
+.imageWrapper{
     border-radius: 11px;
     width: 100%;
     height: 247.50px;
+    overflow: hidden;
+}
+.image{
+    border-radius: 11px;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.2s ease;
+}
+.image:hover{
+    transform: scale(1.05);
+    cursor: pointer;
 }
 .tagsContainer{
     display: flex;
@@ -93,6 +104,11 @@
     width: 40%;
     margin: 0px auto 15px;
     text-align: center;
+    transition: transform 0.2s ease;
+}
+.button:hover{
+    transform: scale(1.03);
+    cursor: pointer;
 }
 
 

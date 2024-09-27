@@ -1,44 +1,52 @@
 import {useState, useEffect} from 'react';
-import Axios from 'axios';
+// import Axios from 'axios';
 import Button from '../button/Button';
 import styles from './generatedCard.module.css';
 import heartIcon from './favorite (1).png';
+import { useNavigate } from 'react-router-dom';
 
-const GeneratedCard = () => {
-    const [meal, setMeal] = useState(null);
+const GeneratedCard = ({recipe}) => {
+    const [recipeState] = useState(recipe);
+    const [isFavorite, setIsFavorite] = useState(false);
+    const navigate = useNavigate();
 
-    const fetchMealData = async () => {
-        try {
-            const response = await Axios.get('https://www.themealdb.com/api/json/v1/1/random.php');
-            setMeal(response.data.meals[0]);
-        } catch (error) {
-            console.error(error.message);
-        }
+    const goToRecipePage = ()=>{
+        navigate(`/recipe/${recipeState._id}`);
     }
-    useEffect(()=>{
-        fetchMealData();
-    },[])
 
     return (
-        <div className={styles.card}>
-            <img src={meal && meal.strMealThumb} alt="profile" className={styles.image}/>
-            <div className={styles.innerCard}>
-                <div className={styles.tagsContainer}>
-                    <div className={`${styles.tag} ${styles.category}`}>{meal && meal.strCategory}</div>
-                    <div className={`${styles.tag} ${styles.cuisine}`}>{meal && meal.strArea}</div>
+            recipeState && 
+            (<div className={styles.card}>
+                <div className={styles.imageWrapper}>
+                    <img 
+                        src={recipeState.image}
+                        alt="profile"
+                        className={styles.image}
+                        onClick={goToRecipePage}
+                    />
                 </div>
-                <div className={styles.mealName}><strong>{meal && meal.strMeal}</strong></div>
-                <input className={styles.checkBox} type="checkbox" name="favorite" id="favorite" />
-                <label htmlFor="favorite" className={styles.favoriteLabel}>
-                    <img className={styles.icon} src={heartIcon} height="30px" alt="favorite-icon" />
-                    <div className={styles.favoriteText}>
-                        <span className={`${styles.add} ${styles.options}`}>Add to Favorites</span>
-                        <span className={`${styles.added} ${styles.options}`}>Added to Favorites</span>
+                <div className={styles.innerCard}>
+                    <div className={styles.tagsContainer}>
+                        <div className={`${styles.tag} ${styles.category}`}>{recipeState.category}</div>
+                        <div className={`${styles.tag} ${styles.cuisine}`}>{recipeState.cuisine}</div>
                     </div>
-                </label>
-                <div className={styles.button}><Button name={"View Recipe"}/></div>
-            </div>
-        </div>
+                    <div className={styles.mealName}><strong>{recipeState.name}</strong></div>
+                    <input className={styles.checkBox} type="checkbox" 
+                        checked={isFavorite}
+                        onChange={() => setIsFavorite(!isFavorite)}
+                        name="favorite"
+                        id={`favorite-${recipeState._id}`}
+                     />
+                    <label htmlFor={`favorite-${recipeState._id}`} className={styles.favoriteLabel}>
+                        <img className={styles.icon} src={heartIcon} height="30px" alt="favorite-icon" />
+                        <div className={styles.favoriteText}>
+                            <span className={`${styles.add} ${styles.options}`}>Add to Favorites</span>
+                            <span className={`${styles.added} ${styles.options}`}>Added to Favorites</span>
+                        </div>
+                    </label>
+                    <div className={styles.button} onClick={goToRecipePage}><Button name={"View Recipe"} /></div>
+                </div>
+            </div>)
      );
 }
  

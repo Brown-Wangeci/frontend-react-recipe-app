@@ -3,8 +3,8 @@ import styles from './testimonials.module.css';
 import eugeneImage from './assets/userImages/eugene-image.jpg';
 import daniellaImage from './assets/userImages/daniella-image.jpg';
 import yabannImage from './assets/userImages/yabann-image.jpg';
-import leftQuote from './assets/icons/left-quote.png';
-import rightQuote from './assets/icons/right-quote.png';
+import leftQuote from './assets/icons/icons8-quotes-100.png';
+import rightQuote from './assets/icons/icons8-quotes-100 (1).png';
 
 
 const Testimonials = () => {
