@@ -1,11 +1,11 @@
 .offered{
     width: 100%;
+    max-width: 1000px;
     padding-block: 20px;
     /* background-color: aliceblue; */
 }
 .title{
     text-align: center;
-    /* font-size: 2rem; */
     color: #507912;
 }
 .subTitle{
@@ -28,6 +28,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.foodImage3{
+    width: 100%;
+    max-width: 450px;
+    /* background-color: blue; */
 }
 .leftUpperOffers, .rightUpperOffers{
     display: grid;
@@ -52,4 +57,41 @@
     justify-content: center;
     max-width: 100%;
 
+}
+.offersDescription > h3{
+    color: #507912;
+    align-self: flex-start;
+}
+
+/* Media Queries */
+@media screen and (max-width: 1050px) {
+    .upperOffers{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .leftUpperOffers, .rightUpperOffers{
+        grid-template-rows: none;
+        grid-template-columns: 1fr 1fr;
+        max-width: 70%;
+    }
+    .lowerOffers{
+        max-width: 50%;
+    }
+}
+
+@media screen and (max-width: 600px) {    
+    .foodImage3{
+        max-width: 300px;
+        margin: 0 auto;
+    }
+    .leftUpperOffers, .rightUpperOffers{
+        display: flex;
+        flex-direction: column;
+    }
+    .lowerOffers{
+        max-width: 70%;
+    }
+    
 }

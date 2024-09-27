@@ -1,7 +1,7 @@
 import styles from './offered.module.css';
 // import foodImage from './assets/foodImages/floating-food-transformed-removebg-preview.png';
 // import foodImage2 from './assets/foodImages/food-image-removebg-preview.png';
-import foodImage3 from './assets/foodImages/food-image3-transformed-removebg-preview.png';
+import foodImage3 from './assets/foodImages/pngwing.com.png';
 // import foodImage5 from './assets/foodImages/food-image5-transformed-removebg-preview.png';
 
 
@@ -15,26 +15,26 @@ const Offered = () => {
                 <section className={styles.upperOffers}>
                     <div className={styles.leftUpperOffers}>
                         <div className={styles.offersDescription}>
-                            <h2>Family Recipes Collection</h2>
+                            <h3>Family Recipes Collection</h3>
                             <p>Discover timeless family recipes passed down through generations, bringing the comfort of home-cooked meals to your kitchen.</p>
                         </div>
                         <div className={styles.offersDescription}>
-                            <h2>Grandma's Classics</h2>
+                            <h3>Grandma's Classics</h3>
                             <p>Relive the warmth and love of grandma’s kitchen with a selection of classic, heartwarming recipes.</p>
                         </div>
                     </div>
 
                     <div className={styles.centerUpperOffers}>
-                        <img src={foodImage3} alt="food-image" />
+                        <img className={styles.foodImage3} src={foodImage3} alt="food-image" />
                     </div>
 
                     <div className={styles.rightUpperOffers}>
                         <div className={styles.offersDescription}>
-                            <h2>Recipe of the week</h2>
+                            <h3>Recipe of the week</h3>
                             <p>Try our featured recipe of the week, handpicked to inspire your next delicious meal</p>
                         </div>
                         <div className={styles.offersDescription}>
-                            <h2>Quick & Easy Meals</h2>
+                            <h3>Quick & Easy Meals</h3>
                             <p>Find simple, time-saving recipes perfect for busy weeknights, ready in 30 minutes or less.</p>
                         </div>
                     </div>
@@ -42,7 +42,7 @@ const Offered = () => {
                 </section>
                 <section className={styles.lowerOffers}>
                     <div className={styles.offersDescription}>
-                        <h2>Community Favorites</h2>
+                        <h3>Community Favorites</h3>
                         <p>Explore the most-loved recipes from our community, chosen by fellow food enthusiasts like you.</p>
                     </div>
                 </section>
