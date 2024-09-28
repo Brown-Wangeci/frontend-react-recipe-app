@@ -1,4 +1,4 @@
-import {useState, useEffect} from 'react';
+import {useState} from 'react';
 // import Axios from 'axios';
 import Button from '../button/Button';
 import styles from './generatedCard.module.css';

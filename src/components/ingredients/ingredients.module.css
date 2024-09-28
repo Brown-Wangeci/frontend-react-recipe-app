@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
 .card{
+    margin: 0 auto;
     width: 100%;
     max-width: 1000px;
     display: flex;
@@ -19,15 +20,53 @@
     margin: 0;
 }
 .li{
+    line-height: 0px;
     display: flex;
     align-items: center;
     gap: 20px;
 }
 .spanList{
+    line-height: 30px;
     font-size: 1.15em;
     margin-block: 10px;
-    border-bottom: dotted;
+    text-decoration: underline;
+    text-decoration-style: dotted;
+    text-underline-offset: 8px;
+    text-decoration-thickness: 2px;
 }
 .bullet{
     width: 20px;
+}
+
+@media screen and (max-width: 1200px) {
+    .card{
+        width: 80%;
+    }
+    .h1{
+        font-size: 1.5em;
+    }
+    .spanList{
+        font-size: 1.1em;
+    }
+    .bullet{
+        width: 15px;
+    }
+}
+
+@media screen and (max-width: 810px) {
+    .spanList{
+        font-size: 1.05em;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .h1{
+        font-size: 1.25em;
+    }
+    .spanList{
+        font-size: 1em;
+    }
+    .bullet{
+        width: 10px;
+    }
 }

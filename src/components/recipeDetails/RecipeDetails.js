@@ -27,7 +27,7 @@ const RecipeDetails = ({recipe}) => {
                 <span className={styles.updated}>Last updated:  <span className={styles.innerUpdated}>{formatDate(recipe.createdAt)}</span></span>
             </div>
             <section className={styles.recipeDetailsSection}>
-                <img className={styles.image} src={recipe.image} alt={recipe.title} height='450' width='600' />
+                <img className={styles.image} src={recipe.image} alt={recipe.title}  />
                 <div className={styles.recipeDetails}>
                     <div  className={styles.allTags}>
                         <div  className={styles.tagGroupOne}>

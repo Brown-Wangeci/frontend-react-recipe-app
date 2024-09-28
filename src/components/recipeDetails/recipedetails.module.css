@@ -1,11 +1,15 @@
 .recipeDetailsContainer{
     width: 100%;
+    margin: 0 auto;
 }
 .hr{
     margin: 10px 0;
 }
 .author{
     font-size: 13px;
+}
+.moreTitleDetails{
+    margin-bottom: 25px;
 }
 .published, .updated{
     font-size: 13px;
@@ -26,7 +30,8 @@
 .image{
     border-radius: 11px;
     box-shadow: 0 0 6px 1px rgba(0,0,0,0.4);
-
+    height: 450px;
+    width: 600px;
 }
 .recipeDetails{
     display: flex;
@@ -36,19 +41,23 @@
 .allTags{
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 15px;
+    width: fit-content;
+    /* background-color: aquamarine; */
 }
 .tagGroupOne, .tagGroupTwo{
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
     gap: 15px;
+    /* background-color: blue; */
 }
 .tag{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: auto;
+    width: fit-content;
     border-radius: 1000px;
     padding: 5px 10px;
     font-size: 15px;
@@ -84,4 +93,95 @@
 .asterisk{
     height: 30px;
     width: 30px;
+}
+
+@media screen and (max-width: 1200px) {
+    .recipeDetailsContainer{
+        width: 80%;
+    }
+    .h1title{
+        font-size: 1.5em;
+    }
+    .recipeDetailsSection{
+        flex-direction: column;
+        gap: 20px;
+        width: fit-content;
+        /* background-color: #94d82d; */
+        align-items: flex-start;
+        margin: 0 auto;
+    }
+    .recipeDetails{
+        width: 100%;
+        gap: 20px;
+    }
+    .note{
+        /* background-color: #d8a0eb; */
+        max-width: 500px;
+    }
+    .allTags{
+        justify-content: space-around;
+        width: 100%;
+        /* background-color: blue; */
+    }
+    .tagGroupOne, .tagGroupTwo{
+        flex-direction: row;
+        justify-content: space-between;
+        /* background-color: aquamarine; */
+    }
+}
+
+@media screen and (max-width: 810px) {
+    .image{
+        height: 337px;
+        width: 450px;
+    }
+    .allTags{
+        margin: 0 auto;
+        flex-direction: column;
+        /* background-color: aqua; */
+        width: fit-content;
+        align-items: flex-start;
+    }
+    .tag{
+        font-size: 14px;
+    }
+    .note{
+        /* background-color: #98FB98; */
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    .preparationDetails{
+        margin: 0 auto;
+    }
+    .noteContent{
+        font-size: 1.05em;
+    }
+    .asterisk{
+        height: 20px;
+        width: 20px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .h1title{
+        font-size: 1.25em;
+    }
+    .image{
+        height: 225px;
+        width: 300px;
+    }
+    .tag{
+        font-size: 13px;
+    }
+    .note{
+        max-width: 300px;
+    }
+    .noteContent{
+        font-size: 1em;
+    }
+    .asterisk{
+        height: 15px;
+        width: 15px;
+    }
+    
 }

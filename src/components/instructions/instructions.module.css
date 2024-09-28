@@ -6,6 +6,7 @@
     box-sizing: border-box;
 }
 .instructions{
+    margin: 0 auto;
     width: 100%;
     max-width: 1000px;
     display: flex;
@@ -48,4 +49,44 @@
     color: rgb(56, 53, 53);
     font-size: 1.2em;
     word-wrap: break-word;
+}
+
+@media screen and (max-width: 1200px) {
+    .instructions{
+        width: 80%;
+    }
+    .instructions h1{
+        font-size: 1.5em;
+    }
+    .instruction{
+        font-size: 1.1em;
+    }
+    .number{
+        font-size: 1.25em;
+    }
+}
+
+@media screen and (max-width: 810px) {
+    .instruction{
+        font-size: 1.05em;
+    }
+    .number{
+        font-size: 1.2em;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .instructions h1{
+        font-size: 1.25em;
+    }
+    .instruction{
+        font-size: 1em;
+    }
+    .number{
+        font-size: 1.1em;
+    }
+    .bullet{
+        height: 15px;
+        width: 15px;
+    }
 }

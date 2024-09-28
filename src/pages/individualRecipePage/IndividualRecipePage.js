@@ -13,6 +13,7 @@ const IndividualRecipePage = () => {
     // const recipe = RecipeMockData[0];
     const [recipeData, setRecipeData] = useState({});
     const { id } = useParams();
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
     const fetchRecipe = async (id) => {
         try {
@@ -28,6 +29,18 @@ const IndividualRecipePage = () => {
             fetchRecipe(id);
         }
     }, [id]);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setWindowWidth(window.innerWidth);
+        };
+
+        window.addEventListener('resize', handleResize);
+
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
     
 
     return ( 
@@ -41,7 +54,7 @@ const IndividualRecipePage = () => {
                     <Instructions instructions={recipeData.instructions}/>
                 </section>
             </div>
-            <ArrowDown bottom='20px' left='20px'/>
+           {windowWidth > 810 && <ArrowDown bottom='20px' left='20px'/>}
         </div>
      );
 }

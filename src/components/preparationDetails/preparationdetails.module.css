@@ -2,11 +2,12 @@
     border: solid 1px rgb(128, 127, 127);
     border-top: 10px solid #94d82d;
     border-radius: 6px;
-    padding: 10px;
+    padding: 15px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: fit-content;
 }
 .details{
     display: grid;
@@ -24,4 +25,19 @@
     border-bottom: 2px dashed rgb(141, 141, 141);
     font-family: 'Gochi Hand', cursive;
     font-size: 1.15em;
+}
+
+@media screen and (max-width: 810px) {
+    .h3{
+        font-size: 1em;
+    }
+    .p{
+        font-size: 0.9em;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .preparationDetails{
+        padding: 10px;
+    }
 }
