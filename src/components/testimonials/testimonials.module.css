@@ -12,6 +12,7 @@
     text-align: center;
 }
 .hr{
+    margin: auto;
     margin-block: 15px;
 }
 .content{
@@ -73,6 +74,9 @@
 }
 
 @media screen and (max-width: 1050px) {
+    .hr{
+        width: 80%;
+    }
     .content{
         grid-template-columns: 1fr;
         width: 70%;

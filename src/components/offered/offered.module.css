@@ -12,6 +12,7 @@
     text-align: center;
 }
 .hr{
+    margin: auto;
     margin-block: 15px;
 }
 .content{
@@ -65,6 +66,9 @@
 
 /* Media Queries */
 @media screen and (max-width: 1050px) {
+    .hr{
+        width: 80%;
+    }
     .upperOffers{
         display: flex;
         flex-direction: column;
@@ -81,7 +85,7 @@
     }
 }
 
-@media screen and (max-width: 600px) {    
+@media screen and (max-width: 600px) {   
     .foodImage3{
         max-width: 300px;
         margin: 0 auto;

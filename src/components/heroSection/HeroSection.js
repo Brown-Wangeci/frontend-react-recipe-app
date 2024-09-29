@@ -3,7 +3,7 @@ import grandmaImage from './assets/peopleImages/recipe-screenshot-removebg-previ
 import familyImage from './assets/peopleImages/wes3-pic-removebg-preview.png';
 import family2Image from './assets/peopleImages/wesonga-pic-removebg-preview.png';
 // import grandmaAndGirlImage from './assets/peopleImages/AdobeStock_938365139_Preview__1_-transformed-removebg-preview.png';
-import ladyImage from './assets/peopleImages/AdobeStock_649050375_Preview-removebg-preview.png';
+// import ladyImage from './assets/peopleImages/AdobeStock_649050375_Preview-removebg-preview.png';
 import guyAndLadyImage from './assets/peopleImages/etsy-screenshot-removebg-preview.png';
 import guyImage from './assets/peopleImages/wes4-pic-removebg-preview.png';
 import { useNavigate } from 'react-router-dom';
@@ -25,7 +25,7 @@ const HeroSection = () => {
     const navigate = useNavigate();
     const [currentIndex, setCurrentIndex] = useState(0);
 
-    const images = [grandmaImage, ladyImage, guyAndLadyImage, guyImage, familyImage, family2Image];
+    const images = [grandmaImage, guyAndLadyImage, guyImage, familyImage, family2Image];
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -56,9 +56,11 @@ const HeroSection = () => {
                         <span className={styles.recipeSpan}> Recipes</span>
                     </h1>
                 </h2>
-                <p className={styles.description}>The best place to find and share recipes.</p>
-                <p className={styles.description}>Bringing the warmth of grandma's kitchen </p>
-                <p className={styles.description}>and the joy of family meals to your table.</p>
+               <div className={styles.descriptions}>
+                    <p className={styles.description}>The best place to find and share recipes.</p>
+                    <p className={styles.description}>Bringing the warmth of grandma's kitchen </p>
+                    <p className={styles.description}>and the joy of family meals to your table.</p>
+               </div>
                 <div className={styles.buttons}>
                     <button className={`${styles.button} ${styles.loginButton}`} onClick={()=>navigate('/login')} >Login <img className={styles.arrowImage} src={arrowImage} alt="arrow" /></button>
                     <button className={`${styles.button} ${styles.signUpButton}`} onClick={()=>navigate('/signup')} >Sign Up <img className={styles.arrowImage} src={arrowImage2} alt="arrow" /></button>
