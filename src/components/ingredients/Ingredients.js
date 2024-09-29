@@ -12,7 +12,7 @@ const Ingredients = ({ingredients}) => {
                 {ingredients.map( (ingredient, index) => 
                     <li key={index} className={styles.li}>
                         <img className={styles.bullet} src={bullet} alt='bulleting'></img>
-                        <span className={styles.spanList}>{ingredient}</span>
+                        <p className={styles.spanList}>{ingredient}</p>
                     </li>
                 )}
             </ul>}

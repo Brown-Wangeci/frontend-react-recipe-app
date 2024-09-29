@@ -7,6 +7,7 @@
 .title{
     text-align: center;
     color: #507912;
+    font-size: 1.8rem;
 }
 .subTitle{
     text-align: center;
@@ -61,7 +62,11 @@
 }
 .offersDescription > h3{
     color: #507912;
+    font-size: 20px;
     align-self: flex-start;
+}
+.p{
+    font-size: 20px;
 }
 
 /* Media Queries */
@@ -96,6 +101,12 @@
     }
     .lowerOffers{
         max-width: 70%;
+    }
+    .offersDescription > h3{
+        font-size: 18px;
+    }
+    .p{
+        font-size: 18px;
     }
     
 }

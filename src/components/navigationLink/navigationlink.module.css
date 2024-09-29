@@ -1,0 +1,40 @@
+.navigationLink{
+    display: flex;
+    align-items: center;
+    /* background-color: blue; */
+    width: fit-content;
+}
+.iconWrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(20px);
+    background: #48ff0022;
+    padding: 10px;
+    border: 3px solid #7cb427;
+    border-radius: 50%;
+    z-index: 2;
+}
+.icon{
+    height: 40px;
+    width: 40px;
+    /* background-color: antiquewhite; */
+    border-radius: 50%;
+}
+.linkWrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: -15px;
+    padding: 10px 25px;
+    border: 3px solid #7cb427;
+    background: #48ff0022;
+    /* background: linear-gradient(-45deg, rgba(28, 30, 38, 0.698), #94d82d9e, rgba(28, 30, 38, 0.698)); */
+    border-top-right-radius: 1000px;
+    border-bottom-right-radius: 1000px;
+    backdrop-filter: blur(20px);
+}
+.link{
+    font-size: 1.5rem;
+
+}

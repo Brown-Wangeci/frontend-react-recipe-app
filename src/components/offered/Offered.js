@@ -16,11 +16,11 @@ const Offered = () => {
                     <div className={styles.leftUpperOffers}>
                         <div className={styles.offersDescription}>
                             <h3>Family Recipes Collection</h3>
-                            <p>Discover timeless family recipes passed down through generations, bringing the comfort of home-cooked meals to your kitchen.</p>
+                            <p className={styles.p}>Discover timeless family recipes passed down through generations, bringing the comfort of home-cooked meals to your kitchen.</p>
                         </div>
                         <div className={styles.offersDescription}>
                             <h3>Grandma's Classics</h3>
-                            <p>Relive the warmth and love of grandma’s kitchen with a selection of classic, heartwarming recipes.</p>
+                            <p className={styles.p}>Relive the warmth and love of grandma’s kitchen with a selection of classic, heartwarming recipes.</p>
                         </div>
                     </div>
 
@@ -31,11 +31,11 @@ const Offered = () => {
                     <div className={styles.rightUpperOffers}>
                         <div className={styles.offersDescription}>
                             <h3>Recipe of the week</h3>
-                            <p>Try our featured recipe of the week, handpicked to inspire your next delicious meal</p>
+                            <p className={styles.p}>Try our featured recipe of the week, handpicked to inspire your next delicious meal</p>
                         </div>
                         <div className={styles.offersDescription}>
                             <h3>Quick & Easy Meals</h3>
-                            <p>Find simple, time-saving recipes perfect for busy weeknights, ready in 30 minutes or less.</p>
+                            <p className={styles.p}>Find simple, time-saving recipes perfect for busy weeknights, ready in 30 minutes or less.</p>
                         </div>
                     </div>
 
@@ -43,7 +43,7 @@ const Offered = () => {
                 <section className={styles.lowerOffers}>
                     <div className={styles.offersDescription}>
                         <h3>Community Favorites</h3>
-                        <p>Explore the most-loved recipes from our community, chosen by fellow food enthusiasts like you.</p>
+                        <p className={styles.p}>Explore the most-loved recipes from our community, chosen by fellow food enthusiasts like you.</p>
                     </div>
                 </section>
             </div>

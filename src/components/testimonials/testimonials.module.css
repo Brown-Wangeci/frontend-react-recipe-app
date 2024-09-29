@@ -5,7 +5,7 @@
 }
 .title{
     text-align: center;
-    /* font-size: 2rem; */
+    font-size: 1.8rem;
     color: #b5941c;
 }
 .subTitle{
@@ -67,6 +67,9 @@
 .userDetails > h2{
     font-size: 1.2rem;
 }
+.p{
+    font-size: 20px;
+}
 .quotes{
     height: 20px;
     width: 20px;
@@ -116,5 +119,8 @@
     }
     .userDetails{
         text-align: center;
+    }
+    .p{
+        font-size: 17px;
     }
 }

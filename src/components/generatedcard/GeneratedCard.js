@@ -30,7 +30,7 @@ const GeneratedCard = ({recipe}) => {
                         <div className={`${styles.tag} ${styles.category}`}>{recipeState.category}</div>
                         <div className={`${styles.tag} ${styles.cuisine}`}>{recipeState.cuisine}</div>
                     </div>
-                    <div className={styles.mealName}><strong>{recipeState.name}</strong></div>
+                    <div className={styles.mealName}><h3>{recipeState.name}</h3></div>
                     <input className={styles.checkBox} type="checkbox" 
                         checked={isFavorite}
                         onChange={() => setIsFavorite(!isFavorite)}

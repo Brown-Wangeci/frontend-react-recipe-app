@@ -26,18 +26,25 @@
     font-family: 'Gochi Hand', cursive;
     font-size: 1.15em;
 }
+.p{
+    font-weight: 600;
+    font-size: 1.2em;
+}
 
 @media screen and (max-width: 810px) {
     .h3{
         font-size: 1em;
     }
     .p{
-        font-size: 0.9em;
+        font-size: 1.1em;
     }
 }
 
 @media screen and (max-width: 600px) {
     .preparationDetails{
         padding: 10px;
+    }
+    .p{
+        font-size: 1em;
     }
 }

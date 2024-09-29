@@ -17,7 +17,7 @@ const Instructions = ({instructions}) => {
                                 <img src={bullet} className={styles.bullet} alt="bulleting" />
                                 <span className={styles.number}>Step: {index+1}</span>
                             </div>
-                            <span className={styles.instruction}>{instruction}</span>
+                            <p className={styles.instruction}>{instruction}</p>
                         </li>
                     )}
                 </ol>

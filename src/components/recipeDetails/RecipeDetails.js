@@ -43,7 +43,7 @@ const RecipeDetails = ({recipe}) => {
                     </div>
                     <div className={styles.note}>
                         <img className={styles.asterisk} src={asterisk} alt="asterisk" />
-                        <div className={styles.noteContent}>{recipe.note}</div>
+                        <div className={styles.noteContent}><span>{recipe.note}</span></div>
                     </div>
                     <div className={styles.preparationDetails}>
                         <PreparationDetails recipe={recipe}/>
