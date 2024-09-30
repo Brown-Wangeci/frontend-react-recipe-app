@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     gap: 5px;
-    width: 330px;
+    width: 275px;
     height: fit-content;
     border-top-left-radius: 11px;
     border-top-right-radius: 11px;
@@ -21,7 +21,7 @@
 .imageWrapper{
     border-radius: 11px;
     width: 100%;
-    height: 247.50px;
+    aspect-ratio: 4 / 3;
     overflow: hidden;
 }
 .image{
@@ -54,7 +54,7 @@
     background-color: #94d82d;
 }
 .mealName{
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 600;
     margin:0px 10px;
     text-align: center;
@@ -75,6 +75,7 @@
 .favoriteText{
     display: flex;
     flex-direction: column;
+    font-size: 15px;
     text-wrap: nowrap;
     position: relative;
     overflow: hidden;
@@ -101,7 +102,7 @@
     animation: heartAnimation 1.5s;
 }
 .button{
-    width: 40%;
+    width: 44%;
     margin: 0px auto 15px;
     text-align: center;
     transition: transform 0.2s ease;

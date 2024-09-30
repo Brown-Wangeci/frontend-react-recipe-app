@@ -30,8 +30,8 @@
 .image{
     border-radius: 11px;
     box-shadow: 0 0 6px 1px rgba(0,0,0,0.4);
-    height: 450px;
     width: 600px;
+    aspect-ratio: 4 / 3;
 }
 .recipeDetails{
     display: flex;
@@ -132,7 +132,6 @@
 
 @media screen and (max-width: 810px) {
     .image{
-        height: 337px;
         width: 450px;
     }
     .allTags{
@@ -167,7 +166,6 @@
         font-size: 1.25em;
     }
     .image{
-        height: 225px;
         width: 300px;
     }
     .tag{

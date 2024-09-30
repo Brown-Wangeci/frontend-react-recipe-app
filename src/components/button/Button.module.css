@@ -2,7 +2,7 @@
 .button{
     width: 100%;
     border: 3px double;
-    padding: 10px;
+    padding: 7px 3px;
     background: transparent;
 }
 .button:active{
@@ -15,7 +15,7 @@
 }
 .buttonText{
     font-family: "Ubuntu", sans-serif;
-    font-size: large;
+    font-size: 17px;
     font-weight: 500;
     font-style: normal;
 }
