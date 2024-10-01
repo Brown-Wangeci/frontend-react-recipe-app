@@ -1,6 +1,6 @@
 import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Navbar from './components/navbar/Navbar.js';
+// import Navbar from './components/navbar/Navbar.js';
 import LogInPage from './pages/loginPage/LoginPage.js';
 import SignUpPage from './pages/signUpPage/SignUpPage.js';
 import RecipesPage from './pages/recipesPage/RecipesPage.js';
@@ -10,6 +10,8 @@ import LandingPage from './pages/landingPage/LandingPage.js';
 import CreateRecipePage from './pages/createRecipePage/CreateRecipePage.js';
 import IndividualRecipePage from './pages/individualRecipePage/IndividualRecipePage.js';
 import { UserProvider } from './context/UserContext.js';
+import NavbarWrapper from './components/NavbarWrapper.js';
+// import { useEffect, useState } from 'react';
 
 
 function App() {
@@ -19,7 +21,7 @@ function App() {
       <UserProvider>
         <BrowserRouter>
           <div className="navbar">
-            <Navbar/>
+            <NavbarWrapper/>
           </div>
           <div className="pages">
             <Routes>

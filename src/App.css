@@ -14,7 +14,7 @@
     margin: 0;
     padding: 0;
 }
-h1, h2,h3, span{
+h1, h2,h3, span, a{
     font-family: CarvingSoft;
 }
 .App{
