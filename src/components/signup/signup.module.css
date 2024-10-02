@@ -4,8 +4,8 @@
 .tag{
     padding: 0px 100px;
     position: absolute;
-    top: 0.8%;
-    right: -28.9%;
+    top: 0.4%;
+    right: -35%;
     transform: rotateZ(45deg);
     background: linear-gradient(#507912, #7cb427, #507912);
     font-family: "Caveat", cursive;
@@ -57,7 +57,7 @@
 .button{
     font-weight: 600;
     width: 90%;
-    font-size: 1.5em;
+    font-size: 1.4em;
     padding: 5px 10px;
     border: 2px solid rgba(0, 0, 0, 0.6);
     background-color: transparent;
@@ -73,7 +73,7 @@
     transform: scale(0.99);
 }
 .logIn{
-    font-size: 1.1em;
+    font-size: 1em;
     text-align: center;
     margin: 10px;
 }

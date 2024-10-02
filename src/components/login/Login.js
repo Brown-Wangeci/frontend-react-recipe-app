@@ -42,7 +42,7 @@ const Login = () => {
         <div className={styles.login}>
             <form className={styles.form} onSubmit={handleSubmit}>
                 <fieldset className={styles.fieldSet}>
-                    <legend className={styles.legend}>Welcome Back!!</legend>
+                    <legend className={styles.legend}><span>Welcome Back!!</span></legend>
                     <div className={styles.inputBlock}>
                         <label className={styles.label} htmlFor="email">Email</label>
                         <input className={`${styles.input} ${styles.email}`}
@@ -66,7 +66,7 @@ const Login = () => {
                         />
                     </div>
                     <div className={styles.forgot}><Link to="/reset-password">Forgot Password ?</Link></div>
-                    <button className={styles.button} type="submit" >Login</button>
+                    <button className={styles.button} type="submit" ><span>Login</span></button>
                     <div className={styles.signUp}>
                         Don't have an account? <Link to="/signup">Sign Up</Link>
                     </div>

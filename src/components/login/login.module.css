@@ -3,8 +3,8 @@
 .tag{
     padding: 0px 100px;
     position: absolute;
-    top: 0.8%;
-    right: -28.9%;
+    top: 0%;
+    right: -33%;
     transform: rotateZ(45deg);
     background: linear-gradient( #a1841d, #eec738, #a1841d);
     font-family: "Caveat", cursive;
@@ -28,7 +28,7 @@
     min-height: 400px;
 }
 .legend{
-    font-size: 2em;
+    font-size: 1.5em;
 }
 .label ,.input{
     display: block;
@@ -62,7 +62,7 @@
     position: absolute;
     right: 20px;
     top: 0;
-    font-size: 1.2em;
+    font-size: 1em;
     text-decoration: none;
     color: rgba(0, 0, 0, 0.6);
 }
@@ -75,7 +75,7 @@
     font-family: "Gochi Hand", cursive;
     font-weight: 600;
     width: 90%;
-    font-size: 1.5em;
+    font-size: 1.4em;
     padding: 5px 10px;
     border: 2px solid rgba(0, 0, 0, 0.6);
     background-color: transparent;
@@ -91,7 +91,7 @@
     transform: scale(0.99);
 }
 .signUp{
-    font-size: 1.1em;
+    font-size: 1em;
     text-align: center;
     margin: 10px;
 }
