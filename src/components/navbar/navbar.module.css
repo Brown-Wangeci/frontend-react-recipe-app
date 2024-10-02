@@ -71,6 +71,8 @@
  }
  .hamburgerIcon{
     display: none;
+    width: fit-content;
+    height: fit-content;
  }
 
 
@@ -91,6 +93,15 @@
     }
     .hamburgerIcon{
         display: block;
+    }
+    .hideLinks{
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.5s ease;
+    }
+    .showLinks{
+        opacity: 1;
+        transition: opacity 0.5s ease;
     }
     .navlinks{
         position: absolute;
