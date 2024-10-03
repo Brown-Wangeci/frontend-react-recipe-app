@@ -41,6 +41,17 @@
     width: 80%;
 }
 
+@media screen and (max-width: 800px) {
+    .hamburgerIconLabelWrapper{
+        height: 45px;
+        width: 45px;
+    }
+    .line{
+        height: 3.4px;
+        width: 60%;
+        margin: 1.8px;
+    }
+}
 @media screen and (max-width: 600px) {
     .hamburgerIconLabelWrapper{
         height: 40px;

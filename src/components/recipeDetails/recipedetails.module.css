@@ -131,6 +131,9 @@
 }
 
 @media screen and (max-width: 810px) {
+    .recipeDetailsContainer{
+        width: fit-content;
+    }
     .image{
         width: 450px;
     }
@@ -162,11 +165,14 @@
 }
 
 @media screen and (max-width: 600px) {
+    .recipeDetailsContainer{
+        width: 90%;
+    }
     .h1title{
         font-size: 1.25em;
     }
     .image{
-        width: 300px;
+        width: 100%;
     }
     .tag{
         font-size: 13px;

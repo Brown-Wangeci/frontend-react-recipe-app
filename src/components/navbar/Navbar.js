@@ -12,10 +12,12 @@ const Navbar = ({navLinks}) => {
 
     return ( 
         <nav className={styles.navbar}>
-            <div className={styles.logoSection}>
-                <img className={styles.logo} src={logo} alt="logo"/>
-                <h1 className={styles.h1}><span>Cosy</span> Recipes</h1>
-            </div>
+            <Link to='/'>
+                <div className={styles.logoSection}>
+                    <img className={styles.logo} src={logo} alt="logo"/>
+                    <h1 className={styles.h1}><span>Cosy</span> Recipes</h1>
+                </div>
+            </Link>
             <div onChange={toggleNavlinksDisplay} className={styles.hamburgerIcon}><HamburgerIcon /></div>
             <div className={`${styles.navlinks} ${!displayNavlinks ? styles.hideLinks: styles.showLinks}`}>
                 <ul className={styles.ulLinks}>
