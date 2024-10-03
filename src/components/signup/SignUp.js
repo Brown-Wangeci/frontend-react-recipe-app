@@ -40,7 +40,7 @@ const SignUp = () => {
         <div className={styles.signup}>
            <form className={styles.form} onSubmit={handleSubmit}>
                 <fieldset className={styles.fieldSet}>
-                    <legend className={styles.legend}><span>Welcome !!</span></legend>
+                    <legend className={styles.legend}><span>Welcome!!</span></legend>
                     <div className={styles.inputBlock}>
                         <label className={styles.label} htmlFor="username">User Name</label>
                         <input className={styles.input}
