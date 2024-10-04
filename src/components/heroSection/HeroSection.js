@@ -16,6 +16,7 @@ import sharletImage from './assets/peopleImages/friendsImages/sharlet-image.jpg'
 import daniellaImage from './assets/peopleImages/friendsImages/daniella-image.jpg';
 import yabannImage from './assets/peopleImages/friendsImages/yabann-image.jpg';
 import faithImage from './assets/peopleImages/friendsImages/faith-image.jpg';
+import makenaImage from './assets/peopleImages/friendsImages/makena-image.jpg';
 import addSign from './assets/icons/add_24dp_75FB4C_FILL0_wght400_GRAD0_opsz24.png';
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
@@ -72,6 +73,7 @@ const HeroSection = () => {
                         <img className={styles.profileImage} src={eugeneImage} alt='user-profile'/>
                         <img className={styles.profileImage} src={daniellaImage} alt='user-profile'/>
                         <img className={styles.profileImage} src={yabannImage} alt='user-profile'/>
+                        <img className={styles.profileImage} src={makenaImage} alt='user-profile'/>
                         <img className={styles.profileImage} src={kevinImage} alt='user-profile'/>
                         <img className={styles.profileImage} src={sharletImage} alt='user-profile'/>
                         <img className={styles.profileImage} src={faithImage} alt='user-profile'/>

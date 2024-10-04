@@ -1,0 +1,49 @@
+.filterBySection{
+    width: 275px;
+}
+.title{
+    font-size: 1.2rem;
+    font-weight:600;
+    margin: 10px auto;
+    text-align: center;
+}
+.filterTitle{
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 5px ;
+}
+.allChoices{
+    padding: 5px;
+    /* background-color:blue; */
+}
+.inputBlock{
+    display: inline-block;
+    margin: 5px 2.5px;
+    /* background-color: aqua; */
+}
+.inputFilter{
+    border: 0.1rem solid #699b1e;
+    background-color: transparent;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    /* font-size: 1rem; */
+    margin-left: 0.5rem;
+    padding: 0.1rem;
+}
+.inputFilter:focus{
+    outline: none;
+    border-color: #cca827;
+}
+.tag{
+    border-radius: 1000px;
+    border: 2px solid #699b1e;
+    padding: 3px 8px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: #699b1e;
+    cursor: pointer;
+}
+.inputSearchBy:checked + .tag{
+    border-color:#cca827;
+    color:#cca827;
+}
