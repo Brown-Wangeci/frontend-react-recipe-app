@@ -1,10 +1,10 @@
 .filterBySection{
-    width: 275px;
+    width: 100%;
 }
 .title{
     font-size: 1.2rem;
     font-weight:600;
-    margin: 10px auto;
+    margin-bottom: 10px;
     text-align: center;
 }
 .filterTitle{
@@ -46,4 +46,37 @@
 .inputSearchBy:checked + .tag{
     border-color:#cca827;
     color:#cca827;
+}
+
+@media screen and (max-width: 1000px) {
+    .filterBySection{
+        width: 100%;
+    }
+    .title{
+        font-size: 1rem;
+    }
+    .filterTitle{
+        font-size: 0.9rem;
+    }
+    .tag{
+        font-size: 0.7rem;
+    }
+    .allSections{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .allChoices{
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+@media screen and (max-width: 765px) {
+    .allSections{
+        display: flex;
+        flex-direction: column;
+    }
+    .allChoices{
+        display: flex;
+        flex-wrap: wrap;
+    }
 }

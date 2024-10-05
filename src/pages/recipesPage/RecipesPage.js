@@ -8,6 +8,7 @@ import FilterBySection from '../../components/filterBySection/FilterBySection';
 
 const RecipesPage = () => {
     const [recipesState, setRecipesState] = useState([]);
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
     const fetchRecipes = async () => {
         try {
@@ -22,6 +23,18 @@ const RecipesPage = () => {
     useEffect(()=>{
         fetchRecipes();
     },[]);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setWindowWidth(window.innerWidth);
+        };
+
+        window.addEventListener('resize', handleResize);
+
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
 
 
     return ( 
@@ -42,7 +55,7 @@ const RecipesPage = () => {
                     }
                 </div>
             </div>
-            <ArrowDown bottom='20px' left='20px'/>
+            {windowWidth > 765 && <ArrowDown bottom='20px' left='20px'/>}
         </div>
      );
 }

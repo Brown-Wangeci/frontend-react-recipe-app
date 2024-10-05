@@ -9,37 +9,39 @@ const FilterBySection = () => {
           <h2 className={styles.title}>Filter By</h2>
           <hr className={styles.hr} />
     
-          {filterData?.map((filter, index) => (
-            <section key={index}>
-              <h3 className={styles.filterTitle}>{filter.title}</h3>
-    
-              {filter.inputType === "number" ? (
-                <input
-                  className={styles.inputFilter}
-                  type="number"
-                  name={filter.value}
-                  id={filter.value}
-                />
-              ) : (
-                <div className={styles.allChoices}>
-                  {filter.options.map((option, idx) => (
-                    <div className={styles.inputBlock} key={idx}>
-                      <input
-                        hidden
-                        className={styles.inputSearchBy}
-                        type="checkbox"
-                        name={option.value}
-                        id={option.value}
-                      />
-                      <label className={styles.tag} htmlFor={option.value}>
-                        {option.label}
-                      </label>
+          <div className={styles.allSections}>
+            {filterData?.map((filter, index) => (
+                <section key={index}>
+                <h3 className={styles.filterTitle}>{filter.title}</h3>
+        
+                {filter.inputType === "number" ? (
+                    <input
+                    className={styles.inputFilter}
+                    type="number"
+                    name={filter.value}
+                    id={filter.value}
+                    />
+                ) : (
+                    <div className={styles.allChoices}>
+                    {filter.options.map((option, idx) => (
+                        <div className={styles.inputBlock} key={idx}>
+                        <input
+                            hidden
+                            className={styles.inputSearchBy}
+                            type="checkbox"
+                            name={option.value}
+                            id={option.value}
+                        />
+                        <label className={styles.tag} htmlFor={option.value}>
+                            {option.label}
+                        </label>
+                        </div>
+                    ))}
                     </div>
-                  ))}
-                </div>
-              )}
-            </section>
-          ))}
+                )}
+                </section>
+            ))}
+          </div>
         </div>
       );
 }

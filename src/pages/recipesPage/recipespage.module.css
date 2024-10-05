@@ -1,6 +1,8 @@
 .content{
     display: grid;
-    grid-template-columns: 1fr 3fr; 
+    grid-template-columns: 1fr 3fr;
+    justify-content: center;
+    gap: 30px; 
 }
 .recipeCards{
     display: grid;
@@ -9,11 +11,13 @@
     justify-content: center;
 }
 .searchBar{
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin-block: 30px;
+    margin-bottom: 30px;
+    margin-top: 10px;
 }
 .searchInput {
     width: 40%;
@@ -26,13 +30,12 @@
     outline: none;
     transition: box-shadow 0.3s ease;
     backdrop-filter: blur(8px);
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.2) inset;
 }
 .searchInput:hover {
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1), 0 0 10px rgba(0, 0, 0, 0.2) inset;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.2) inset;
 }
 .searchInput:focus{
-    border: 2px solid #699b1e;
+    border: 2px solid #4d7216;
 }
 .searchButton{
     display: flex;
@@ -47,7 +50,58 @@
     cursor: pointer;
     padding: 10px;
     background-color: #94d82d;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1), 0 0 10px rgba(0, 0, 0, 0.2) inset;
 }
 .searchButton:hover{
     background-color: #94d82dd1;
+}
+
+.filterSection{
+    height: fit-content;
+    width: 275px;
+}
+
+@media screen and (max-width: 1370px) {
+    .content{
+        grid-template-columns: 1fr 2fr;
+    }
+    .recipeCards{
+        grid-template-columns: repeat(2, 1fr);
+    }   
+}
+@media screen and (max-width: 1070px) {
+    .content{
+        grid-template-columns: 0.72fr 2fr;
+    }
+    .filterSection{
+        width: 200px;
+    }
+}
+@media screen and (max-width: 1000px) {
+    .content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .filterSection{
+        width: 570px;
+    }
+    .searchInput{
+        width: 80%;
+    }
+}
+@media screen and (max-width:765px) {
+    .filterSection{
+        width: 80%;
+    }
+    .recipeCards{
+        grid-template-columns: 1fr;
+    }
+}
+@media screen and (max-width: 600px) {
+    .searchInput{
+        width: 70%;
+    }
+    
 }
