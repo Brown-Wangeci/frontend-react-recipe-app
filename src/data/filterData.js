@@ -1,21 +1,28 @@
 export const filterData = [
     {
-      title: "Meal Type",
-      options: [
-        { label: "Breakfast", value: "breakfast" },
-        { label: "Lunch", value: "lunch" },
-        { label: "Dinner", value: "dinner" },
-        { label: "Snack", value: "snack" },
-        { label: "Brunch", value: "brunch" }
-      ]
+        title: "Meal Type",
+        categoryName: "meal_type",
+        options: [
+            { label: "Breakfast", value: "breakfast" },
+            { label: "Lunch", value: "lunch" },
+            { label: "Dinner", value: "dinner" },
+            { label: "Snack", value: "snack" },
+            { label: "Brunch", value: "brunch" }
+        ]
     },
     {
-      title: "Budget",
-      inputType: "number",
-      value: "budget"
+        title: "Budget",
+        categoryName: "budget",
+        options: [
+            { label: "Under Ksh.500", value: "under_500" },
+            { label: "Ksh.500 - Ksh.1000", value: "500_to_1000" },
+            { label: "Ksh.1000 - Ksh.1500", value: "1000_to_1500" },
+            { label: "Ksh.1500 and above", value: "above_1500" }
+        ]
     },
     {
       title: "Cuisine",
+      categoryName: "cuisine",
       options: [
         { label: "Indian", value: "indian" },
         { label: "Chinese", value: "chinese" },
@@ -28,6 +35,7 @@ export const filterData = [
     },
     {
       title: "Dietary",
+      categoryName: "dietary",
       options: [
         { label: "Vegan", value: "vegan" },
         { label: "Vegetarian", value: "vegetarian" },
@@ -39,39 +47,43 @@ export const filterData = [
     },
     {
       title: "Method of Cooking",
+      categoryName: "method_of_cooking",
       options: [
-        { label: "Baking", value: "baking" },
-        { label: "Grilling", value: "grilling" },
-        { label: "Frying", value: "frying" },
-        { label: "Boiling", value: "boiling" },
-        { label: "Steaming", value: "steaming" },
-        { label: "Microwave", value: "microwave" }
+        { label: "Baked", value: "baked" },
+        { label: "Grilled", value: "grilled" },
+        { label: "Fried", value: "fried" },
+        { label: "Boiled", value: "boiled" },
+        { label: "Steamed", value: "steamed" },
+        { label: "Microwaved", value: "microwaved" }
       ]
     },
     {
-      title: "Course",
-      options: [
-        { label: "Appetizer", value: "appetizer" },
-        { label: "Main Course", value: "main_course" },
-        { label: "Dessert", value: "dessert" },
-        { label: "Soup", value: "soup" },
-        { label: "Salad", value: "salad" },
-        { label: "Side Dish", value: "side_dish" }
-      ]
+        title: "Course",
+        categoryName: "course",
+        options: [
+            { label: "Appetizer", value: "appetizer" },
+            { label: "Main Course", value: "main course" },
+            { label: "Dessert", value: "dessert" },
+            { label: "Soup", value: "soup" },
+            { label: "Salad", value: "salad" },
+            { label: "Side Dish", value: "side_dish" }
+        ]
     },
     {
-      title: "Ingredient",
-      options: [
-        { label: "Chicken", value: "chicken" },
-        { label: "Beef", value: "beef" },
-        { label: "Pork", value: "pork" },
-        { label: "Fish", value: "fish" },
-        { label: "Vegetables", value: "vegetables" },
-        { label: "Eggs", value: "eggs" }
-      ]
+        title: "Ingredient",
+        categoryName: "ingredient",
+        options: [
+            { label: "Chicken", value: "chicken" },
+            { label: "Beef", value: "beef" },
+            { label: "Pork", value: "pork" },
+            { label: "Fish", value: "fish" },
+            { label: "Vegetables", value: "vegetables" },
+            { label: "Eggs", value: "eggs" }
+        ]
     },
     {
       title: "Cooking Time",
+      categoryName: "cooking_time",
       options: [
         { label: "Under 30 minutes", value: "under_30" },
         { label: "30-60 minutes", value: "30_to_60" },
@@ -79,13 +91,14 @@ export const filterData = [
       ]
     },
     {
-      title: "Health Concerns",
-      options: [
-        { label: "Low Carb", value: "low_carb" },
-        { label: "Low Sugar", value: "low_sugar" },
-        { label: "Low Sodium", value: "low_sodium" },
-        { label: "High Protein", value: "high_protein" }
-      ]
+        title: "Health Concerns",
+        categoryName: "health_concerns",
+        options: [
+            { label: "Low Carb", value: "low carb" },
+            { label: "Low Sugar", value: "low sugar" },
+            { label: "Low Sodium", value: "low sodium" },
+            { label: "High Protein", value: "high protein" }
+        ]
     }
   ];
   
