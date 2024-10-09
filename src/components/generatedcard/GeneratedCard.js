@@ -1,5 +1,5 @@
 import {useState} from 'react';
-// import Axios from 'axios';
+import axios from 'axios';
 import Button from '../button/Button';
 import styles from './generatedCard.module.css';
 import heartIcon from './favorite (1).png';
@@ -12,6 +12,9 @@ const GeneratedCard = ({recipe}) => {
 
     const goToRecipePage = ()=>{
         navigate(`/recipe/${recipeState._id}`);
+    }
+
+    const addToFavorites = ()=>{
     }
 
     return (
@@ -33,7 +36,7 @@ const GeneratedCard = ({recipe}) => {
                     <div className={styles.mealName}><h3>{recipeState.name}</h3></div>
                     <input className={styles.checkBox} type="checkbox" 
                         checked={isFavorite}
-                        onChange={() => setIsFavorite(!isFavorite)}
+                        onChange={() => setIsFavorite(true)}
                         name="favorite"
                         id={`favorite-${recipeState._id}`}
                      />
