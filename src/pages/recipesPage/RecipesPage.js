@@ -48,7 +48,8 @@ const RecipesPage = () => {
     // Filter Functionality
 
     // For the search input
-    const handleSearch = () => {
+    const handleSearch = (e) => {
+        setSearchTerm(e.target.value)
         if (searchTerm === "" || searchTerm === null || searchTerm === undefined) {
             setFilteredRecipes(recipesState);
         }else {
@@ -75,9 +76,9 @@ const RecipesPage = () => {
               (filters.method_of_cooking ? filters.method_of_cooking.includes(recipe.method.toLowerCase()) : true) &&
       
               (filters.course ? filters.course.includes(recipe.course.toLowerCase()) : true) &&
-      
-              (filters.ingredient ? recipe.ingredients.some((ingredient) => filters.ingredient.includes(ingredient.toLowerCase())) : true) &&
-      
+              
+              (filters.ingredient ? filters.ingredient.includes(recipe.category.toLowerCase()) : true) &&
+              
               (filters.cooking_time ? filters.cooking_time === getCookingTimeCategory(recipe.cookingtime) : true) &&
       
               (filters.health_concerns ? filters.health_concerns.includes(recipe.diet.toLowerCase()) : true)
@@ -115,12 +116,10 @@ const RecipesPage = () => {
                     type="text"
                     placeholder="Search for recipe by name..."
                     value={searchTerm}
-                    onChange={(e) => setSearchTerm(e.target.value)}
+                    onChange={(e) => handleSearch(e)}
                 />
                 <button
-                    className={styles.searchButton}
-                    onClick={handleSearch}
-                >Search</button>
+                    className={styles.searchButton}>Search</button>
             </div>
             <div className={styles.content}>
                 <div className={styles.filterSection}>

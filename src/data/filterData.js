@@ -78,7 +78,8 @@ export const filterData = [
             { label: "Pork", value: "pork" },
             { label: "Fish", value: "fish" },
             { label: "Vegetables", value: "vegetables" },
-            { label: "Eggs", value: "eggs" }
+            { label: "Eggs", value: "eggs" },
+            { label: "Cheese", value: "cheese" }
         ]
     },
     {

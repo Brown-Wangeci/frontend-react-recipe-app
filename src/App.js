@@ -11,6 +11,7 @@ import CreateRecipePage from './pages/createRecipePage/CreateRecipePage.js';
 import IndividualRecipePage from './pages/individualRecipePage/IndividualRecipePage.js';
 import { UserProvider } from './context/UserContext.js';
 import NavbarWrapper from './components/NavbarWrapper.js';
+import FavoritesPage from './pages/favoritesPage/FavoritesPage.js';
 // import { useEffect, useState } from 'react';
 
 
@@ -30,6 +31,7 @@ function App() {
                 <Route path='login' element={<LogInPage/>}/>
                 <Route path='signup' element={<SignUpPage/>}/>
                 <Route path='recipes' element={<RecipesPage/>}/>
+                <Route path='favorites' element={<FavoritesPage/>}/>
                 <Route path='create-recipe' element={<CreateRecipePage/>}/>
                 <Route path='reset-password' element={<ResetPasswordPage/>}/>
                 <Route path='recipe/:id' element={<IndividualRecipePage/>}/>
