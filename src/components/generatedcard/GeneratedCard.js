@@ -1,5 +1,4 @@
 import {useState} from 'react';
-import axios from 'axios';
 import Button from '../button/Button';
 import styles from './generatedCard.module.css';
 import heartIcon from './favorite (1).png';
@@ -12,9 +11,6 @@ const GeneratedCard = ({recipe}) => {
 
     const goToRecipePage = ()=>{
         navigate(`/recipe/${recipeState._id}`);
-    }
-
-    const addToFavorites = ()=>{
     }
 
     return (
