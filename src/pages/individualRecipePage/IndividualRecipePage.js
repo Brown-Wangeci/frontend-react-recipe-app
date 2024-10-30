@@ -35,6 +35,7 @@ const IndividualRecipePage = () => {
             setWindowWidth(window.innerWidth);
         };
 
+    
         window.addEventListener('resize', handleResize);
 
         return () => {
