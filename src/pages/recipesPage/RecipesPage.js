@@ -16,8 +16,6 @@ const RecipesPage = () => {
 
 
     useEffect(() => {
-        console.log('Backend URL:', url);
-
         const fetchRecipes = async () => {
             try {
                 const response = await axios.get(`${url}/recipes`);
