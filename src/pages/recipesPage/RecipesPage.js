@@ -15,20 +15,20 @@ const RecipesPage = () => {
     const url = process.env.BACKEND_URL;
 
 
-    const fetchRecipes = async () => {
-        try {
-            const response = await axios.get(`${url}/recipes`);
-            console.log('Hello',response.data)
-            setRecipesState(response.data);
-            setFilteredRecipes(response.data);
-        } catch (error) {
-            console.error(error.message);
-        }
-    }
-
-    useEffect(()=>{
+    useEffect(() => {
+        const fetchRecipes = async () => {
+            try {
+                const response = await axios.get(`${url}/recipes`);
+                setRecipesState(response.data);
+                setFilteredRecipes(response.data);
+            } catch (error) {
+                console.error(error.message);
+            }
+        };
+    
         fetchRecipes();
-    },[]);
+    }, [url]);
+    
 
     useEffect(() => {
         const handleResize = () => {

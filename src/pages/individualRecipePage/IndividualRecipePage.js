@@ -15,20 +15,21 @@ const IndividualRecipePage = () => {
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
     const url = process.env.BACKEND_URL;
 
-    const fetchRecipe = async (id) => {
-        try {
-            const response = await axios.get(`${url}/recipes/${id}`);
-            setRecipeData(response.data);
-        } catch (error) {
-            console.error(error.message);
-        }
-    };
-
     useEffect(() => {
-        if (id){
-            fetchRecipe(id);
+        const fetchRecipe = async () => {
+            try {
+                const response = await axios.get(`${url}/recipes/${id}`);
+                setRecipeData(response.data);
+            } catch (error) {
+                console.error(error.message);
+            }
+        };
+    
+        if (id) {
+            fetchRecipe();
         }
-    }, [id]);
+    }, [id, url]);
+        
 
     useEffect(() => {
         const handleResize = () => {
