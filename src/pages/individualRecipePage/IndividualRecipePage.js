@@ -10,7 +10,6 @@ import axios from 'axios';
 
 
 const IndividualRecipePage = () => {
-    // const recipe = RecipeMockData[0];
     const [recipeData, setRecipeData] = useState({});
     const { id } = useParams();
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -29,7 +28,7 @@ const IndividualRecipePage = () => {
         if (id){
             fetchRecipe(id);
         }
-    }, [id]);
+    }, [id, fetchRecipe]);
 
     useEffect(() => {
         const handleResize = () => {
