@@ -71,3 +71,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 ![image](https://github.com/user-attachments/assets/a2e8ff45-daf5-4a1d-b969-894bcd6d6bad)
 
+visit at https://cosyrecipes.netlify.app/
