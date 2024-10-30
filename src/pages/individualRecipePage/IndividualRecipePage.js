@@ -13,7 +13,7 @@ const IndividualRecipePage = () => {
     const [recipeData, setRecipeData] = useState({});
     const { id } = useParams();
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-    const url = process.env.BACKEND_URL;
+    const url = process.env.REACT_APP_BACKEND_URL;
 
     useEffect(() => {
         const fetchRecipe = async () => {
@@ -29,7 +29,7 @@ const IndividualRecipePage = () => {
             fetchRecipe();
         }
     }, [id, url]);
-        
+
 
     useEffect(() => {
         const handleResize = () => {

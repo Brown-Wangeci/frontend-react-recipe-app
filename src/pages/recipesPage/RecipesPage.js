@@ -12,7 +12,7 @@ const RecipesPage = () => {
     const [searchTerm, setSearchTerm] = useState("");
     const [filters, setFilters] = useState({});
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-    const url = process.env.BACKEND_URL;
+    const url = process.env.REACT_APP_BACKEND_URL;
 
 
     useEffect(() => {
