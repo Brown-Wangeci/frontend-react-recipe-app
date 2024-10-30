@@ -28,7 +28,7 @@ const IndividualRecipePage = () => {
         if (id){
             fetchRecipe(id);
         }
-    }, [id, fetchRecipe]);
+    }, [id]);
 
     useEffect(() => {
         const handleResize = () => {

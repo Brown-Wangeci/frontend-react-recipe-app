@@ -28,7 +28,7 @@ const RecipesPage = () => {
 
     useEffect(()=>{
         fetchRecipes();
-    },[fetchRecipe]);
+    },[]);
 
     useEffect(() => {
         const handleResize = () => {
