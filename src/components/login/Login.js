@@ -6,6 +6,7 @@ import { useNavigate } from 'react-router-dom';
 import { useCookies } from 'react-cookie'
 
 const Login = () => {
+    const url = process.env.BACKEND_URL;
     const navigate = useNavigate();
     const [, setCookie] = useCookies(['access_token']);
 
@@ -17,7 +18,7 @@ const Login = () => {
     const handleSubmit = async (e)=>{
         e.preventDefault();
         try {
-            const response = await axios.post('http://localhost:3001/users/login', userDetails);
+            const response = await axios.post(`${url}/users/login`, userDetails);
             setCookie('access_token', response.data.token,);
             window.localStorage.setItem('userID', response.data.user.id);
             console.log(response);

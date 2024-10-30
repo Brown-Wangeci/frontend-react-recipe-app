@@ -6,6 +6,7 @@ import { useNavigate } from 'react-router-dom';
 
 
 const SignUp = () => {
+    const url = process.env.BACKEND_URL;
     const navigate = useNavigate();
 
     const [userDetails, setUserDetails] = useState({
@@ -18,7 +19,7 @@ const SignUp = () => {
         e.preventDefault();
 
         try {
-            await axios.post('http://localhost:3001/users/register', userDetails);
+            await axios.post(`${url}/users/register`, userDetails);
             alert("User Registered");
             navigate('/login');
         } catch (error) {

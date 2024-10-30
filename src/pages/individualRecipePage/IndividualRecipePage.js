@@ -14,10 +14,11 @@ const IndividualRecipePage = () => {
     const [recipeData, setRecipeData] = useState({});
     const { id } = useParams();
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+    const url = process.env.BACKEND_URL;
 
     const fetchRecipe = async (id) => {
         try {
-            const response = await axios.get(`http://localhost:3001/recipes/${id}`);
+            const response = await axios.get(`${url}/recipes/${id}`);
             setRecipeData(response.data);
         } catch (error) {
             console.error(error.message);

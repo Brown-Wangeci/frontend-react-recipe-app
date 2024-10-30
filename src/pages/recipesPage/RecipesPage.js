@@ -12,10 +12,12 @@ const RecipesPage = () => {
     const [searchTerm, setSearchTerm] = useState("");
     const [filters, setFilters] = useState({});
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+    const url = process.env.BACKEND_URL;
+
 
     const fetchRecipes = async () => {
         try {
-            const response = await axios.get('http://localhost:3001/recipes');
+            const response = await axios.get(`${url}/recipes`);
             console.log('Hello',response.data)
             setRecipesState(response.data);
             setFilteredRecipes(response.data);
