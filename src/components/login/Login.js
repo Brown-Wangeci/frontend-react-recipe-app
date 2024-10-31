@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom';
 import { useCookies } from 'react-cookie'
 
 const Login = () => {
-    const url = process.env.BACKEND_URL;
+    const url = process.env.REACT_APP_BACKEND_URL;
     const navigate = useNavigate();
     const [, setCookie] = useCookies(['access_token']);
 

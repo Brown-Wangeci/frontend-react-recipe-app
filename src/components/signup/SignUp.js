@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom';
 
 
 const SignUp = () => {
-    const url = process.env.BACKEND_URL;
+    const url = process.env.REACT_APP_BACKEND_URL;
     const navigate = useNavigate();
 
     const [userDetails, setUserDetails] = useState({
