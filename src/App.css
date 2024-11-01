@@ -13,6 +13,8 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    color: black;
+    border-radius: 0px;
 }
 h1, h2,h3, span, a{
     font-family: CarvingSoft;
