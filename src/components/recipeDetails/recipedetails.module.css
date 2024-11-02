@@ -14,12 +14,14 @@
 .published, .updated{
     font-size: 13px;
     display: block;
+    color: #333;
 }
 .innerAuthor{
     font-size: 15px;
 }
 .innerPublished, .innerUpdated{
     font-size: 14px;
+    color: #333;
 }
 .recipeDetailsSection{
     width: 100%;
