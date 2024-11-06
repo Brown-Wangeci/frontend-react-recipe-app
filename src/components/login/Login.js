@@ -17,13 +17,13 @@ const Login = () => {
         e.preventDefault();
         try {
             const response = await axios.post(`${url}/users/login`, userDetails);
-            console.log(response.data);
-            alert("Logged in")
+            console.log(response.data.message);
+            alert(response.data.message);
             navigate('/recipes');
 
         } catch (error) {
-            console.error(error.message);
-            alert(error.message);
+            console.error(error.response.data.message);
+            alert(error.response.data.message);
         }
     }
     const handleChange = (e)=>{
