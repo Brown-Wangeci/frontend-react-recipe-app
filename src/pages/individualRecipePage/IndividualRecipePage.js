@@ -18,7 +18,7 @@ const IndividualRecipePage = () => {
     useEffect(() => {
         const fetchRecipe = async () => {
             try {
-                const response = await axios.get(`${url}/recipes/${id}`);
+                const response = await axios.get(`${url}/recipes/${id}`, {withCredentials: true});
                 setRecipeData(response.data);
             } catch (error) {
                 console.error(error.message);

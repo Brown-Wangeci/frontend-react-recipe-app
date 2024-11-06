@@ -3,12 +3,10 @@ import styles from './login.module.css';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
-import { useCookies } from 'react-cookie'
 
 const Login = () => {
     const url = process.env.REACT_APP_BACKEND_URL;
     const navigate = useNavigate();
-    const [, setCookie] = useCookies(['access_token']);
 
     const [userDetails, setUserDetails] = useState({
         email: '',
@@ -19,9 +17,7 @@ const Login = () => {
         e.preventDefault();
         try {
             const response = await axios.post(`${url}/users/login`, userDetails);
-            setCookie('access_token', response.data.token,);
-            window.localStorage.setItem('userID', response.data.user.id);
-            console.log(response);
+            console.log(response.data);
             alert("Logged in")
             navigate('/recipes');
 

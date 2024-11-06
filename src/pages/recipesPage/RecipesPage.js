@@ -18,7 +18,7 @@ const RecipesPage = () => {
     useEffect(() => {
         const fetchRecipes = async () => {
             try {
-                const response = await axios.get(`${url}/recipes`);
+                const response = await axios.get(`${url}/recipes`, {withCredentials: true});
                 setRecipesState(response.data);
                 setFilteredRecipes(response.data);
             } catch (error) {

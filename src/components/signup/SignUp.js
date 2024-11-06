@@ -19,12 +19,13 @@ const SignUp = () => {
         e.preventDefault();
 
         try {
-            await axios.post(`${url}/users/register`, userDetails);
-            alert("User Registered");
-            navigate('/login');
+            const res = await axios.post(`${url}/users/register`, userDetails);
+            console.log(res.data);
+            alert(res.data.message);
+            navigate('/recipes');
         } catch (error) {
-            console.error(error.message);
-            alert(error.message);
+            console.error(error.response.data.message);
+            alert(error.response.data.message);
         }
     }
 
