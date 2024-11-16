@@ -48,6 +48,7 @@ function App() {
           richColors
           position="top-right"
           toastOptions={{
+            closeButton: true,
             style: {
               padding: '15px 25px',
               fontSize: '20px',
