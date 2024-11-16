@@ -77,6 +77,7 @@ a{
 .liLinks:hover{
     background-color: #7cb4271a;
     border-bottom: solid 3px #7cb427;
+    cursor: pointer;
  }
 .liLinks:active{
     background-color: #e7bd231b;
@@ -87,6 +88,16 @@ a{
     width: fit-content;
     height: fit-content;
  }
+.logoutButton{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: #333;
+}
 
 
 @media screen and (max-width: 800px){
@@ -140,12 +151,17 @@ a{
         border: none;
         background-color: #7cb4276e;
         border-left: solid 3px #333;
-     }
+    }
     .liLinks:active{
         border: none;
         background-color: #e7bd236e;
         border-left: solid 3px #333;
-     }
+    }
+    .logoutButton:hover{
+        border-top: solid 3px #333;
+        border-bottom: solid 3px #333;
+        border-right: solid 3px #333;
+    }
 }
 
 @media screen and (max-width: 600px){

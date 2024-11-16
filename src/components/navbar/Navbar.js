@@ -3,9 +3,11 @@ import logo from './picnic-basket.png';
 import { Link } from 'react-router-dom';
 import HamburgerIcon from '../hamburgerIcon/HamburgerIcon';
 import { useState } from 'react';
+import useUser from '../../hooks/useUser';
 
 const Navbar = ({navLinks}) => {
     const [displayNavlinks, setDisplayNavlinks] = useState(false);
+    const { clearToken, userToken } = useUser();
     const toggleNavlinksDisplay = () => {
         setDisplayNavlinks(!displayNavlinks);
     }
@@ -24,6 +26,16 @@ const Navbar = ({navLinks}) => {
                     {navLinks.map((link, index)=>(
                         <li key={index} className={styles.liLinks}><Link to={link.path}>{link.name}</Link></li>
                     ))}
+                    {
+                        userToken ? (
+                            <li className={styles.liLinks} onClick={clearToken}><span className={styles.logoutButton}>Logout</span></li>
+                        ) : (
+                            <>
+                                <li className={styles.liLinks}><Link to='/login'>Login</Link></li>
+                                <li className={styles.liLinks}><Link to='/signup'>Signup</Link></li>
+                            </>
+                        )
+                    }
                 </ul>
             </div>
         </nav>

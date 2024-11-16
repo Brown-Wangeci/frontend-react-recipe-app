@@ -15,18 +15,6 @@ const NavbarWrapper = () => {
         ]);
       } else {
         switch (location.pathname) {
-          case '/login':
-            setNavLinks([
-                {name: 'Home', path: '/'},
-                {name: 'Sign Up', path: '/signup'}
-            ]);
-            break;
-          case '/signup':
-            setNavLinks([
-                {name: 'Home', path: '/'},
-                {name: 'Login', path: '/login'}
-            ]);
-            break;
           case '/recipes':
             setNavLinks([
                 {name: 'Home', path: '/'},
@@ -41,17 +29,13 @@ const NavbarWrapper = () => {
             break;
           case '/reset-password':
             setNavLinks([
-                {name: 'Home', path: '/'},
-                {name: 'Sign Up', path: '/signup'},
-                {name: 'Login', path: '/login'}
+                {name: 'Home', path: '/'}
             ]);
             break;
           default:
             setNavLinks([
                 {name: 'Home', path: '/'},
-                {name: 'Recipes', path: '/recipes'},
-                {name: 'Sign Up', path: '/signup'},
-                {name: 'Login', path: '/login'}
+                {name: 'Recipes', path: '/recipes'}
             ]);
             break;
         }

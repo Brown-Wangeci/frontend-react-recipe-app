@@ -3,12 +3,15 @@ import { useState } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
+import useUser from '../../hooks/useUser';
+import { toast } from 'sonner';
 
 
 const SignUp = () => {
     const url = process.env.REACT_APP_BACKEND_URL;
     const navigate = useNavigate();
 
+    const { setUserToken } = useUser();
     const [userDetails, setUserDetails] = useState({
         username: '',
         email: '',
@@ -20,12 +23,18 @@ const SignUp = () => {
 
         try {
             const res = await axios.post(`${url}/users/register`, userDetails);
+
+            if(res.data.token){
+                setUserToken(res.data.token);
+                localStorage.setItem('token', res.data.token);
+            }
             console.log(res.data);
-            alert(res.data.message);
+            toast.success(res.data.message);
             navigate('/recipes');
         } catch (error) {
-            console.error(error.response.data.message);
-            alert(error.response.data.message);
+            const message = error?.response?.data?.message || 'Signup failed';
+            console.error( message );
+            toast.error(message);
         }
     }
 

@@ -3,11 +3,14 @@ import styles from './login.module.css';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
+import useUser from '../../hooks/useUser';
+import { toast } from 'sonner';
 
 const Login = () => {
     const url = process.env.REACT_APP_BACKEND_URL;
     const navigate = useNavigate();
 
+    const { setUserToken } = useUser();
     const [userDetails, setUserDetails] = useState({
         email: '',
         password: ''
@@ -17,13 +20,18 @@ const Login = () => {
         e.preventDefault();
         try {
             const response = await axios.post(`${url}/users/login`, userDetails);
+            if(response.data.token){
+                setUserToken(response.data.token);
+                localStorage.setItem('token', response.data.token);
+            };
             console.log(response.data.message);
-            alert(response.data.message);
+            toast.success(response.data.message);
             navigate('/recipes');
 
         } catch (error) {
-            console.error(error.response.data.message);
-            alert(error.response.data.message);
+            const message = error?.response?.data?.message || 'Login failed';
+            console.error( message );
+            toast.error(message);
         }
     }
     const handleChange = (e)=>{
