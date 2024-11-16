@@ -1,19 +1,25 @@
 import styles from './notfoundpage.module.css';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { toast } from 'sonner';
 
 const NotFoundPage = () => {
     const navigate = useNavigate();
+    const [countdown, setCountdown] = useState(5);
 
     useEffect(() => {
-        toast.loading({message: 'Redirecting in 5 seconds...'}, {duration: 5000});
-        
-        const timer = setTimeout(() => {
-            navigate('/');
-        }, 5000);
+        const interval = setInterval(() => {
+            setCountdown(prevCountdown => {
+                if (prevCountdown === 1) {
+                    clearInterval(interval);
+                    navigate('/');
+                    return 0;
+                }
+                return prevCountdown - 1;
+            });
+        }, 1000);
 
-        return () => clearTimeout(timer);
+        
+        return () => clearInterval(interval);
     }, [navigate]);
 
     return ( 
@@ -21,8 +27,9 @@ const NotFoundPage = () => {
             <h1 className={styles.h1}>404</h1>
             <h2 className={styles.h2}>Page Not Found</h2>
             <p className={styles.p}>Sorry, that page doesn't exist</p>
+            <p className={styles.countdown}>Redirecting in {countdown} seconds...</p>
         </div>
-     );
-}
- 
+    );
+};
+
 export default NotFoundPage;

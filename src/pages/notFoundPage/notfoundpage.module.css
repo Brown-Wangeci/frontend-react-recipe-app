@@ -15,7 +15,12 @@
     color: #3333338a;
 }
 .p{
+    font-weight: 600;
     font-size: 1.5rem;
+    color: #3333338a;
+}
+.countdown{
+    font-size: 1.3rem;
     color: #333;
 }
 
