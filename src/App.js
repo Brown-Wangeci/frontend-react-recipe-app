@@ -13,6 +13,7 @@ import FavoritesPage from './pages/favoritesPage/FavoritesPage.js';
 import ProtectedRoute from './routingcomponents/ProtectedRoute.js';
 import PublicRoute from './routingcomponents/PublicRoute.js';
 import { Toaster } from 'sonner';
+import NotFoundPage from './pages/notFoundPage/NotFoundPage.js';
 
 
 function App() {
@@ -35,6 +36,7 @@ function App() {
                 <Route path='reset-password' element={<ResetPasswordPage/>}/>
                 <Route path='recipe/:id' element={<IndividualRecipePage/>}/>
               </Route>
+              <Route path='*' element={<NotFoundPage/>}/>
             </Routes>
           </div>
           <div className="footer">
