@@ -7,7 +7,7 @@ const NotFoundPage = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        toast.loading('Redirecting in 5 seconds...');
+        toast.loading({message: 'Redirecting in 5 seconds...'}, {duration: 5000});
         
         const timer = setTimeout(() => {
             navigate('/');
