@@ -7,6 +7,7 @@ import RecipeDetails from '../../components/recipeDetails/RecipeDetails';
 import { useEffect,  useState } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
+import Loader from '../../components/loader/Loader';
 
 
 const IndividualRecipePage = () => {
@@ -14,14 +15,20 @@ const IndividualRecipePage = () => {
     const { id } = useParams();
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
     const url = process.env.REACT_APP_BACKEND_URL;
+    const [loading, setLoading] = useState(false);
+
 
     useEffect(() => {
         const fetchRecipe = async () => {
             try {
+                setLoading(true);
                 const response = await axios.get(`${url}/recipes/${id}`, {withCredentials: true});
                 setRecipeData(response.data);
+                await new Promise((resolve) => setTimeout(resolve, 1500));
             } catch (error) {
                 console.error(error.message);
+            }finally {
+                setLoading(false);
             }
         };
     
@@ -47,7 +54,8 @@ const IndividualRecipePage = () => {
 
     return ( 
         <div className={styles.individualRecipePage}>
-            <div className={styles.recipeContainer}>
+            { loading ? (<div className={styles.loading}><Loader /></div>) : (
+                <div className={styles.recipeContainer}>
                 <RecipeDetails recipe={recipeData}/>
                 <section className={styles.ingredientsSection}>
                     <Ingredients ingredients={recipeData.ingredients}/>
@@ -56,6 +64,7 @@ const IndividualRecipePage = () => {
                     <Instructions instructions={recipeData.instructions}/>
                 </section>
             </div>
+            )}
            {windowWidth > 810 && <ArrowDown bottom='20px' left='20px'/>}
         </div>
      );
