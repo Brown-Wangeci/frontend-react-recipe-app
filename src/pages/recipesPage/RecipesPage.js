@@ -17,6 +17,7 @@ const RecipesPage = ({credentials=false ,url, page}) => {
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
     const { userToken } = useUser();
     const [ loading, setLoading ] = useState(false);
+    const loadingTime = 320;
 
 
     useEffect(() => {
@@ -28,7 +29,7 @@ const RecipesPage = ({credentials=false ,url, page}) => {
                 setRecipesState(response.data);
                 setFilteredRecipes(response.data);
 
-                await new Promise((resolve) => setTimeout(resolve, 1500));
+                await new Promise((resolve) => setTimeout(resolve, loadingTime));
             } catch (error) {
                 const message = error.response?.data?.message || "Error fetching recipes";
                 console.error(message);

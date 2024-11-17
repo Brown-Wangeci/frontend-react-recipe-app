@@ -16,6 +16,7 @@ const IndividualRecipePage = () => {
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
     const url = process.env.REACT_APP_BACKEND_URL;
     const [loading, setLoading] = useState(false);
+    const loadingTime = 320;
 
 
     useEffect(() => {
@@ -24,7 +25,7 @@ const IndividualRecipePage = () => {
                 setLoading(true);
                 const response = await axios.get(`${url}/recipes/${id}`, {withCredentials: true});
                 setRecipeData(response.data);
-                await new Promise((resolve) => setTimeout(resolve, 1500));
+                await new Promise((resolve) => setTimeout(resolve, loadingTime));
             } catch (error) {
                 console.error(error.message);
             }finally {
