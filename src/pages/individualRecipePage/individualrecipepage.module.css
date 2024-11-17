@@ -17,4 +17,14 @@
 .ingredientsSection, .instructionsSection{
     margin: 50px auto;
 }
-
+.noRecipeFound{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.noRecipe{
+    height: fit-content;
+    width: 100%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.2rem;
+}

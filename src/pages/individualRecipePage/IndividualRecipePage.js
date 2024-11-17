@@ -11,7 +11,7 @@ import Loader from '../../components/loader/Loader';
 
 
 const IndividualRecipePage = () => {
-    const [recipeData, setRecipeData] = useState({});
+    const [recipeData, setRecipeData] = useState(null);
     const { id } = useParams();
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
     const url = process.env.REACT_APP_BACKEND_URL;
@@ -55,17 +55,26 @@ const IndividualRecipePage = () => {
 
     return ( 
         <div className={styles.individualRecipePage}>
-            { loading ? (<div className={styles.loading}><Loader /></div>) : (
-                <div className={styles.recipeContainer}>
-                <RecipeDetails recipe={recipeData}/>
-                <section className={styles.ingredientsSection}>
-                    <Ingredients ingredients={recipeData.ingredients}/>
-                </section>
-                <section className={styles.instructionsSection}>
-                    <Instructions instructions={recipeData.instructions}/>
-                </section>
-            </div>
-            )}
+           {loading ? (
+                        <div className={styles.loading}>
+                            <Loader />
+                        </div>
+                    ) : recipeData ? (
+                        <div className={styles.recipeContainer}>
+                            <RecipeDetails recipe={recipeData} />
+                            <section className={styles.ingredientsSection}>
+                            <Ingredients ingredients={recipeData.ingredients} />
+                            </section>
+                            <section className={styles.instructionsSection}>
+                            <Instructions instructions={recipeData.instructions} />
+                            </section>
+                        </div>
+                    ) : (
+                        <div className={styles.noRecipeFound}>
+                            <pre className={styles.noRecipe}>No recipe Here 😢</pre>
+                        </div>
+                    )
+            }
            {windowWidth > 810 && <ArrowDown bottom='20px' left='20px'/>}
         </div>
      );
