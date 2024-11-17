@@ -6,6 +6,7 @@ import axios from 'axios';
 import FilterBySection from '../../components/filterBySection/FilterBySection';
 import useUser from "../../hooks/useUser";
 import { toast } from "sonner";
+import Loader from '../../components/loader/Loader';
 
 
 const RecipesPage = ({credentials=false ,url, page}) => {
@@ -15,19 +16,25 @@ const RecipesPage = ({credentials=false ,url, page}) => {
     const [filters, setFilters] = useState({});
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
     const { userToken } = useUser();
+    const [ loading, setLoading ] = useState(false);
 
 
     useEffect(() => {
         const fetchRecipes = async () => {
             try {
+                setLoading(true);
                 const headers = credentials ? { 'Authorization': `Bearer ${userToken}` } : {};
                 const response = await axios.get(url, { headers });
                 setRecipesState(response.data);
                 setFilteredRecipes(response.data);
+
+                await new Promise((resolve) => setTimeout(resolve, 1500));
             } catch (error) {
                 const message = error.response?.data?.message || "Error fetching recipes";
                 console.error(message);
                 toast.error(message);
+            }finally {
+                setLoading(false);
             }
         };
 
@@ -133,13 +140,18 @@ const RecipesPage = ({credentials=false ,url, page}) => {
                 <div className={styles.filterSection}>
                     <FilterBySection onFiltersChange={handleFiltersChange}/>
                 </div>
-                <div className={styles.recipeCards}>
-                    {
-                        filteredRecipes.length > 0 ? filteredRecipes.map((recipe) => {
-                            return <GeneratedCard key={recipe._id} recipe={recipe} />
-                        }): <h2>No recipes found</h2>
-                    }
-                </div>
+                { loading ? (    
+                                <div className={styles.loading}><Loader/></div>
+                            ) : (
+                                <div className={styles.recipeCards}>
+                                {
+                                    filteredRecipes.length > 0 ? filteredRecipes.map((recipe) => {
+                                        return <GeneratedCard key={recipe._id} recipe={recipe} />
+                                    }): <pre className={styles.noRecipes}>No recipes Here 😢</pre>
+                                }
+                            </div>
+                            )         
+                }
             </div>
             {windowWidth > 765 && <ArrowDown bottom='20px' left='20px'/>}
         </div>
