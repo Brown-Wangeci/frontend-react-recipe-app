@@ -1,3 +1,10 @@
+.pageTitle{
+    font-size: 1.5rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+}
 .content{
     display: grid;
     grid-template-columns: 1fr 3fr;
@@ -90,6 +97,9 @@
     }
 }
 @media screen and (max-width:765px) {
+    .pageTitle{
+        font-size: 1.2rem;
+    }
     .filterSection{
         width: 80%;
     }
@@ -98,6 +108,9 @@
     }
 }
 @media screen and (max-width: 600px) {
+    .pageTitle{
+        font-size: 1rem;
+    }
     .searchInput{
         width: 70%;
     }

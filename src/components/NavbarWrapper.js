@@ -11,25 +11,51 @@ const NavbarWrapper = () => {
         setNavLinks([
           {name: 'Home', path: '/'},
           {name: 'Recipes', path: '/recipes'},
-          {name: 'Create Recipe', path: '/create-recipe'}
+          {name: 'Create Recipe', path: '/create-recipe'},
+          {name: 'My Recipes', path: '/my-recipes'},
+          {name: 'Favorites', path: '/favorites'}
         ]);
       } else {
         switch (location.pathname) {
           case '/recipes':
             setNavLinks([
                 {name: 'Home', path: '/'},
-                {name: 'Create Recipe', path: '/create-recipe'}
+                {name: 'Create Recipe', path: '/create-recipe'},
+                {name: 'My Recipes', path: '/my-recipes'},
+                {name: 'Favorites', path: '/favorites'}
             ]);
             break;
           case '/create-recipe':
             setNavLinks([
                 {name: 'Home', path: '/'},
-                {name: 'Recipes', path: '/recipes'}
+                {name: 'Recipes', path: '/recipes'},
+                {name: 'Create Recipe', path: '/create-recipe'},
+                {name: 'My Recipes', path: '/my-recipes'},
+                {name: 'Favorites', path: '/favorites'}
+              ]);
+            break;
+          case '/favorites':
+            setNavLinks([
+              {name: 'Home', path: '/'},
+              {name: 'Recipes', path: '/recipes'},
+              {name: 'Create Recipe', path: '/create-recipe'},
+              {name: 'My Recipes', path: '/my-recipes'},
+            ]);
+            break;
+          case '/my-recipes':
+            setNavLinks([
+              {name: 'Home', path: '/'},
+              {name: 'Recipes', path: '/recipes'},
+              {name: 'Favorites', path: '/favorites'},
+              {name: 'Create Recipe', path: '/create-recipe'}
             ]);
             break;
           case '/reset-password':
             setNavLinks([
-                {name: 'Home', path: '/'}
+                {name: 'Home', path: '/'},
+                {name: 'Create Recipe', path: '/create-recipe'},
+                {name: 'My Recipes', path: '/my-recipes'},
+                {name: 'Favorites', path: '/favorites'}
             ]);
             break;
           default:

@@ -2,14 +2,16 @@ import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import LogInPage from './pages/loginPage/LoginPage.js';
 import SignUpPage from './pages/signUpPage/SignUpPage.js';
-import RecipesPage from './pages/recipesPage/RecipesPage.js';
+// import RecipesPage from './pages/recipesPage/RecipesPage.js';
 import Footer from './components/footer/Footer.js';
 import ResetPasswordPage from './pages/resetPasswordPage/ResetPasswordPage.js';
 import LandingPage from './pages/landingPage/LandingPage.js';
 import CreateRecipePage from './pages/createRecipePage/CreateRecipePage.js';
 import IndividualRecipePage from './pages/individualRecipePage/IndividualRecipePage.js';
 import NavbarWrapper from './components/NavbarWrapper.js';
+import AllRecipesPage from './pages/allRecipesPage/AllRecipesPage.js';
 import FavoritesPage from './pages/favoritesPage/FavoritesPage.js';
+import MyRecipesPage from './pages/myRecipesPage/MyRecipesPage.js';
 import ProtectedRoute from './routingcomponents/ProtectedRoute.js';
 import PublicRoute from './routingcomponents/PublicRoute.js';
 import { Toaster } from 'sonner';
@@ -30,8 +32,9 @@ function App() {
                 <Route index element={<LandingPage/>}/>
                 <Route path='login' element={<PublicRoute><LogInPage/></PublicRoute>}/>
                 <Route path='signup' element={<PublicRoute><SignUpPage/></PublicRoute>}/>
-                <Route path='recipes' element={<RecipesPage/>}/>
+                <Route path='recipes' element={<AllRecipesPage/>}/>
                 <Route path='favorites' element={<ProtectedRoute><FavoritesPage/></ProtectedRoute>}/>
+                <Route path='my-recipes' element={<ProtectedRoute><MyRecipesPage/></ProtectedRoute>}/>
                 <Route path='create-recipe' element={<ProtectedRoute><CreateRecipePage/></ProtectedRoute>}/>
                 <Route path='reset-password' element={<ResetPasswordPage/>}/>
                 <Route path='recipe/:id' element={<IndividualRecipePage/>}/>

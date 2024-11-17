@@ -22,21 +22,38 @@ const Navbar = ({navLinks}) => {
             </Link>
             <div onChange={toggleNavlinksDisplay} className={styles.hamburgerIcon}><HamburgerIcon /></div>
             <div className={`${styles.navlinks} ${!displayNavlinks ? styles.hideLinks: styles.showLinks}`}>
-                <ul className={styles.ulLinks}>
-                    {navLinks.map((link, index)=>(
-                        <li key={index} className={styles.liLinks}><Link to={link.path}>{link.name}</Link></li>
-                    ))}
-                    {
-                        userToken ? (
-                            <li className={styles.liLinks} onClick={clearToken}><span className={styles.logoutButton}>Logout</span></li>
-                        ) : (
-                            <>
-                                <li className={styles.liLinks}><Link to='/login'>Login</Link></li>
-                                <li className={styles.liLinks}><Link to='/signup'>Signup</Link></li>
-                            </>
-                        )
-                    }
-                </ul>
+            <ul className={styles.ulLinks}>
+    {navLinks.map((link, index) => (
+        (link.path === '/favorites' || link.path === '/my-recipes' || link.path === '/create-recipe') ? (
+            userToken ? (
+                <li key={index} className={styles.liLinks}>
+                    <Link to={link.path}>{link.name}</Link>
+                </li>
+            ) : null
+        ) : (
+            <li key={index} className={styles.liLinks}>
+                <Link to={link.path}>{link.name}</Link>
+            </li>
+        )
+    ))}
+    {
+        userToken ? (
+            <li className={styles.liLinks} onClick={clearToken}>
+                <span className={styles.logoutButton}>Logout</span>
+            </li>
+        ) : (
+            <>
+                <li className={styles.liLinks}>
+                    <Link to='/login'>Login</Link>
+                </li>
+                <li className={styles.liLinks}>
+                    <Link to='/signup'>Signup</Link>
+                </li>
+            </>
+        )
+    }
+</ul>
+
             </div>
         </nav>
      );

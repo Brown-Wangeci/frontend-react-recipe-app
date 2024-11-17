@@ -4,30 +4,35 @@ import styles from './recipespage.module.css';
 import {useState,  useEffect} from 'react';
 import axios from 'axios';
 import FilterBySection from '../../components/filterBySection/FilterBySection';
+import useUser from "../../hooks/useUser";
+import { toast } from "sonner";
 
 
-const RecipesPage = () => {
+const RecipesPage = ({credentials=false ,url, page}) => {
     const [recipesState, setRecipesState] = useState([]);
     const [filteredRecipes, setFilteredRecipes] = useState([]);
     const [searchTerm, setSearchTerm] = useState("");
     const [filters, setFilters] = useState({});
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-    const url = process.env.REACT_APP_BACKEND_URL;
+    const { userToken } = useUser();
 
 
     useEffect(() => {
         const fetchRecipes = async () => {
             try {
-                const response = await axios.get(`${url}/recipes`, {withCredentials: true});
+                const headers = credentials ? { 'Authorization': `Bearer ${userToken}` } : {};
+                const response = await axios.get(url, { headers });
                 setRecipesState(response.data);
                 setFilteredRecipes(response.data);
             } catch (error) {
-                console.error(error.message);
+                const message = error.response?.data?.message || "Error fetching recipes";
+                console.error(message);
+                toast.error(message);
             }
         };
-    
-        fetchRecipes();
-    }, [url]);
+
+        if (url) fetchRecipes();
+    }, [url, credentials, userToken]);
     
 
     useEffect(() => {
@@ -112,6 +117,7 @@ const RecipesPage = () => {
 
     return ( 
         <div className={styles.recipesPage}>
+            {page && <h1 className={styles.pageTitle}>{page}</h1>}
             <div className={styles.searchBar}>
                 <input
                     className={styles.searchInput}
