@@ -16,7 +16,7 @@ const IndividualRecipePage = () => {
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
     const url = process.env.REACT_APP_BACKEND_URL;
     const [loading, setLoading] = useState(false);
-    const loadingTime = 320;
+    const loadingTime = 300;
 
 
     useEffect(() => {
