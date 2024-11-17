@@ -2,7 +2,6 @@ import styles from './individualrecipepage.module.css';
 import Ingredients from '../../components/ingredients/Ingredients';
 import Instructions from '../../components/instructions/Instructions';
 import ArrowDown from '../../components/arrowDown/ArrowDown';
-// import { RecipeMockData } from '../../mockdata/RecipeData';
 import RecipeDetails from '../../components/recipeDetails/RecipeDetails';
 import { useEffect,  useState } from 'react';
 import { useParams } from 'react-router-dom';
