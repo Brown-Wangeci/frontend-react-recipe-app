@@ -29,7 +29,6 @@ const NavbarWrapper = () => {
             setNavLinks([
                 {name: 'Home', path: '/'},
                 {name: 'Recipes', path: '/recipes'},
-                {name: 'Create Recipe', path: '/create-recipe'},
                 {name: 'My Recipes', path: '/my-recipes'},
                 {name: 'Favorites', path: '/favorites'}
               ]);

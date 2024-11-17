@@ -17,7 +17,7 @@ const RecipesPage = ({credentials=false ,url, page}) => {
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
     const { userToken } = useUser();
     const [ loading, setLoading ] = useState(false);
-    const loadingTime = 300;
+    const loadingTime = 200;
 
 
     useEffect(() => {
