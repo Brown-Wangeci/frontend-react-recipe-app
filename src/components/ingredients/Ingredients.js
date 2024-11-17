@@ -1,5 +1,5 @@
 import styles from './ingredients.module.css';
-import bullet from './arrow-right.png';
+import bullet from './arrow-right.webp';
 
 const Ingredients = ({ingredients}) => {
 

@@ -1,5 +1,5 @@
 import styles from './navbar.module.css';
-import logo from './picnic-basket.png';
+import logo from './picnic-basket.webp';
 import { Link } from 'react-router-dom';
 import HamburgerIcon from '../hamburgerIcon/HamburgerIcon';
 import { useState } from 'react';

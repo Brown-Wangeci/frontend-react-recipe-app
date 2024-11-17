@@ -1,10 +1,9 @@
 import styles from './testimonials.module.css';
-// import brownImage from './assets/userImages/linkedinpic2.jpg';
-import eugeneImage from './assets/userImages/eugene-image.jpg';
-import daniellaImage from './assets/userImages/daniella-image.jpg';
-import yabannImage from './assets/userImages/yabann-image.jpg';
-import leftQuote from './assets/icons/icons8-quotes-100.png';
-import rightQuote from './assets/icons/icons8-quotes-100 (1).png';
+import eugeneImage from './assets/userImages/eugene-image.webp';
+import daniellaImage from './assets/userImages/daniella-image.webp';
+import yabannImage from './assets/userImages/yabann-image.webp';
+import leftQuote from './assets/icons/icons8-quotes-100.webp';
+import rightQuote from './assets/icons/icons8-quotes-100 (1).webp';
 
 
 const Testimonials = () => {

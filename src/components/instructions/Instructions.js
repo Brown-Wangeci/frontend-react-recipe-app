@@ -1,5 +1,5 @@
 import styles from './instructions.module.css';
-import bullet from './check-mark.png';
+import bullet from './check-mark.webp';
 
 const Instructions = ({instructions}) => {
 

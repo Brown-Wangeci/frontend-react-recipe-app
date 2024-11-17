@@ -1,6 +1,6 @@
 import styles from './recipedetails.module.css';
 import PreparationDetails from '../preparationDetails/PreparationDetails';
-import asterisk from './asterisk_24dp_FFFF55_FILL0_wght400_GRAD0_opsz24.png';
+import asterisk from './asterisk_24dp_FFFF55_FILL0_wght400_GRAD0_opsz24.webp';
 
 
 
