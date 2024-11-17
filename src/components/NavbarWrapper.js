@@ -11,34 +11,34 @@ const NavbarWrapper = () => {
         setNavLinks([
           {name: 'Home', path: '/'},
           {name: 'Recipes', path: '/recipes'},
-          {name: 'Create Recipe', path: '/create-recipe'},
+          {name: 'Favorites', path: '/favorites'},
           {name: 'My Recipes', path: '/my-recipes'},
-          {name: 'Favorites', path: '/favorites'}
+          {name: 'Create Recipe', path: '/create-recipe'}
         ]);
       } else {
         switch (location.pathname) {
           case '/recipes':
             setNavLinks([
                 {name: 'Home', path: '/'},
-                {name: 'Create Recipe', path: '/create-recipe'},
+                {name: 'Favorites', path: '/favorites'},
                 {name: 'My Recipes', path: '/my-recipes'},
-                {name: 'Favorites', path: '/favorites'}
+                {name: 'Create Recipe', path: '/create-recipe'}
             ]);
             break;
           case '/create-recipe':
             setNavLinks([
                 {name: 'Home', path: '/'},
                 {name: 'Recipes', path: '/recipes'},
-                {name: 'My Recipes', path: '/my-recipes'},
-                {name: 'Favorites', path: '/favorites'}
+                {name: 'Favorites', path: '/favorites'},
+                {name: 'My Recipes', path: '/my-recipes'}
               ]);
             break;
           case '/favorites':
             setNavLinks([
               {name: 'Home', path: '/'},
               {name: 'Recipes', path: '/recipes'},
-              {name: 'Create Recipe', path: '/create-recipe'},
               {name: 'My Recipes', path: '/my-recipes'},
+              {name: 'Create Recipe', path: '/create-recipe'}
             ]);
             break;
           case '/my-recipes':
@@ -52,9 +52,9 @@ const NavbarWrapper = () => {
           case '/reset-password':
             setNavLinks([
                 {name: 'Home', path: '/'},
-                {name: 'Create Recipe', path: '/create-recipe'},
+                {name: 'Favorites', path: '/favorites'},
                 {name: 'My Recipes', path: '/my-recipes'},
-                {name: 'Favorites', path: '/favorites'}
+                {name: 'Create Recipe', path: '/create-recipe'}
             ]);
             break;
           default:

@@ -52,7 +52,7 @@ const GeneratedCard = ({recipe}) => {
                 <div className={styles.imageWrapper}>
                     <img 
                         src={recipeState.image}
-                        alt="profile"
+                        alt="recipe-image"
                         className={styles.image}
                         onClick={goToRecipePage}
                     />
