@@ -1,7 +1,7 @@
 import {useState} from 'react';
 import Button from '../button/Button';
 import styles from './generatedCard.module.css';
-import heartIcon from './favorite (1).png';
+import heartIcon from './favorite (1).webp';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import useUser from '../../hooks/useUser';
