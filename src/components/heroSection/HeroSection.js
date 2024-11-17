@@ -19,7 +19,6 @@ import faithImage from './assets/peopleImages/friendsImages/faith-image.jpg';
 import makenaImage from './assets/peopleImages/friendsImages/makena-image.jpg';
 import addSign from './assets/icons/add_24dp_75FB4C_FILL0_wght400_GRAD0_opsz24.png';
 import { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
 
 
 const HeroSection = () => {
@@ -38,20 +37,10 @@ const HeroSection = () => {
 
     return ( 
         <div className={styles.heroSection}>
-            <motion.div 
-                className={styles.leftSection}
-                initial={{ x: '-100vw' }}
-                animate={{ x: 0 }}
-                transition={{ duration: 0.5, ease: "easeOut"}}
-            >
+            <div className={styles.leftSection}>
                 <img className={styles.grandmaImage} src={images[currentIndex]} alt={`Slide ${currentIndex + 1}`} />
-            </motion.div>
-            <motion.div
-                className={styles.rightSection}
-                initial={{ x: '100vw' }}
-                animate={{ x: 0 }}
-                transition={{ duration: 0.5, ease: "easeOut"}}
-            >
+            </div>
+            <div className={styles.rightSection}>
                 <h2 className={styles.title}>Welcome to 
                     <h1 className={styles.h1}>Cosy
                         <span className={styles.recipeSpan}> Recipes</span>
@@ -80,7 +69,7 @@ const HeroSection = () => {
                     </div>
                     <div className={styles.users}><span className={styles.usersNumber}>1200</span><img className={styles.addSign} src={addSign} alt="add-sign" /> <span className={styles.families}>Users</span></div>
                 </div>
-            </motion.div>
+            </div>
         </div>
      );
 }
