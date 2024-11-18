@@ -11,11 +11,7 @@ const CreateRecipePage = () => {
     const handleSaveRecipe = async (recipeData) => {
         const formData = new FormData();
         Object.keys(recipeData).forEach((key) => {
-        if (key === 'ingredients' || key === 'instructions') {
-            formData.append(key, JSON.stringify(recipeData[key])); // Convert arrays to JSON
-        } else {
             formData.append(key, recipeData[key]);
-        }
         });
 
         try {
@@ -26,13 +22,12 @@ const CreateRecipePage = () => {
                 },
             });
 
-            console.log('Recipe saved:', response.data);
-            // Optionally, handle success (e.g., update UI, reset form)
-            toast.success(response.data.message);
+            const message = 'Recipe saved successfully';
+            console.log(message, response.data);
+            toast.success(message);
         } catch (error) {
             console.error('Error saving recipe:', error);
-            // Optionally, show an error message to the user
-            toast.error(error.message);
+            toast.error('Error saving recipe');
         }
     };
 
