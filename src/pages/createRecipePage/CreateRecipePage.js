@@ -10,22 +10,9 @@ const CreateRecipePage = () => {
 
     const handleSaveRecipe = async (recipeData) => {
         const formData = new FormData();
-
-        //////////////////////////////////////////////////////
         Object.keys(recipeData).forEach((key) => {
-            if (key === 'ingredients' || key === 'instructions'){
-                recipeData[key].forEach((item) => {
-                    Object.keys(item).forEach((itemKey) => {
-                        formData.append(`${key}[${itemKey}]`, item[itemKey]);
-                    });
-                });
-
-            }else {
-                formData.append(key, recipeData[key]);
-            }
+            formData.append(key, recipeData[key]);
         });
-
-        //////////////////////////////////////////////////////
 
         try {
             const response = await axios.post( url, formData, {
