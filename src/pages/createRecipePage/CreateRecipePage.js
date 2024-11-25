@@ -9,13 +9,10 @@ const CreateRecipePage = () => {
     const { userToken } = useUser();
 
     const handleSaveRecipe = async (recipeData) => {
-        const formData = new FormData();
-        Object.keys(recipeData).forEach((key) => {
-            formData.append(key, recipeData[key]);
-        });
+        const recipeJSON = JSON.stringify(recipeData);
 
         try {
-            const response = await axios.post( url, formData, {
+            const response = await axios.post( url, recipeJSON, {
                 headers: {
                     'Authorization': `Bearer ${userToken}`,
                     'Content-Type': 'multipart/form-data',
