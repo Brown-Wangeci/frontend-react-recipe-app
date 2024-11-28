@@ -9,24 +9,34 @@ const CreateRecipePage = () => {
     const { userToken } = useUser();
 
     const handleSaveRecipe = async (recipeData) => {
-        const recipeJSON = JSON.stringify(recipeData);
-
+        const formData = new FormData();
+    
+        Object.keys(recipeData).forEach((key) => {
+            if (Array.isArray(recipeData[key])) {
+                recipeData[key].forEach((item) => formData.append(key, item));
+            } else if (key === 'image' && recipeData[key]) {
+                formData.append(key, recipeData[key]);
+            } else {
+                formData.append(key, recipeData[key]);
+            }
+        });
+    
         try {
-            const response = await axios.post( url, recipeJSON, {
+            const response = await axios.post(url, formData, {
                 headers: {
                     'Authorization': `Bearer ${userToken}`,
                     'Content-Type': 'multipart/form-data',
                 },
             });
-
-            const message = 'Recipe saved successfully';
-            console.log(message, response.data);
-            toast.success(message);
+    
+            toast.success('Recipe saved successfully');
+            console.log('Recipe saved:', response.data);
         } catch (error) {
             console.error('Error saving recipe:', error);
             toast.error('Error saving recipe');
         }
     };
+    
 
 
 
