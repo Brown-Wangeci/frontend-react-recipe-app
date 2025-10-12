@@ -70,7 +70,7 @@ const Login = () => {
                             onChange={handleChange}
                         />
                     </div>
-                    <div className={styles.forgot}><Link to="/reset-password">Forgot Password ?</Link></div>
+                    // <div className={styles.forgot}><Link to="/reset-password">Forgot Password ?</Link></div>
                     <button className={styles.button} type="submit" ><span>Login</span></button>
                     <div className={styles.signUp}>
                         Don't have an account? <Link to="/signup">Sign Up</Link>
